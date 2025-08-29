@@ -1,0 +1,2014 @@
+nohup: ignoring input
+/root/AI-Codereview-Gitlab/myenv/lib/python3.12/site-packages/click/core.py:1193: UserWarning: The parameter --serializer is used more than once. Remove its duplicate as parameters should be unique.
+  parser = self.make_parser(ctx)
+/root/AI-Codereview-Gitlab/myenv/lib/python3.12/site-packages/click/core.py:1193: UserWarning: The parameter -S is used more than once. Remove its duplicate as parameters should be unique.
+  parser = self.make_parser(ctx)
+/root/AI-Codereview-Gitlab/myenv/lib/python3.12/site-packages/click/core.py:1186: UserWarning: The parameter --serializer is used more than once. Remove its duplicate as parameters should be unique.
+  self.parse_args(ctx, args)
+/root/AI-Codereview-Gitlab/myenv/lib/python3.12/site-packages/click/core.py:1186: UserWarning: The parameter -S is used more than once. Remove its duplicate as parameters should be unique.
+  self.parse_args(ctx, args)
+20:16:01 Worker rq:worker:cd59dd92739f4cc181202261eba9d75a started with PID 52605, version 2.1.0
+20:16:01 Subscribing to channel rq:pubsub:cd59dd92739f4cc181202261eba9d75a
+20:16:01 *** Listening on 10.42.41.50:29418...
+20:16:01 Cleaning registries for queue: 10.42.41.50:29418
+21:15:46 Cleaning registries for queue: 10.42.41.50:29418
+22:15:31 Cleaning registries for queue: 10.42.41.50:29418
+23:15:16 Cleaning registries for queue: 10.42.41.50:29418
+00:15:01 Cleaning registries for queue: 10.42.41.50:29418
+01:14:46 Cleaning registries for queue: 10.42.41.50:29418
+02:14:31 Cleaning registries for queue: 10.42.41.50:29418
+03:14:16 Cleaning registries for queue: 10.42.41.50:29418
+04:14:01 Cleaning registries for queue: 10.42.41.50:29418
+05:13:46 Cleaning registries for queue: 10.42.41.50:29418
+06:13:31 Cleaning registries for queue: 10.42.41.50:29418
+07:13:16 Cleaning registries for queue: 10.42.41.50:29418
+08:13:01 Cleaning registries for queue: 10.42.41.50:29418
+09:12:46 Cleaning registries for queue: 10.42.41.50:29418
+10:12:32 Cleaning registries for queue: 10.42.41.50:29418
+11:05:38 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (2802f194-b238-4953-a5df-57e87987e5ce)
+2025-08-27 11:05:43,010 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 11:05:43,011 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 11:05:43,012 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: Iae088db053d47504a4e533f9574d395be6ed07ba/974142be1dbc4552d0773bde173cb553cd49237e
+2025-08-27 11:05:43,012 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: 974142be1dbc4552d0773bde173cb553cd49237e
+2025-08-27 11:05:43,013 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:974142be1dbc4552d0773bde173cb553cd49237e
+2025-08-27 11:05:43,013 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:05:43,901 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:974142be1dbc4552d0773bde173cb553cd49237e
+2025-08-27 11:05:43,948 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263808,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"974142be1dbc4552d0773bde173cb553cd49237e","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/1","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756263808,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-11}],"sizeInsertions":10,"sizeDeletions":64}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 11:05:43,950 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']（共2个）
+2025-08-27 11:05:43,951 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:05:44,814 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 11:05:44,859 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 11:05:44,861 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:05:45,727 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 11:05:45,774 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":1,"moreChanges":false}
+
+2025-08-27 11:07:07,827 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs的diff内容: use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+use crate::bindings::{
+    kvm...
+2025-08-27 11:07:07,828 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:07:08,692 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Iae088db053d47504a4e533f9574d395be6ed07ba arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs
+2025-08-27 11:07:08,739 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"974142be1dbc4552d0773bde173cb553cd49237e","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/1","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756263808,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-11}],"sizeInsertions":10,"sizeDeletions":64}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":9,"moreChanges":false}
+
+2025-08-27 11:07:08,741 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs（新增1行，删除-53行，状态：modified）
+2025-08-27 11:07:08,742 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:07:09,605 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 11:07:09,651 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 11:07:09,653 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:07:10,517 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 11:07:10,564 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 11:08:28,088 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/pkvm.c的diff内容: // SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2021 Google LLC
+ * Author: Fuad Tabba <tabba@google.com>
+ */
+
+#include <linux/kvm_host.h>
+#include <linux/mm.h>
+
+#include <kvm/arm_hypercal...
+2025-08-27 11:08:28,089 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 11:08:29,374 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Iae088db053d47504a4e533f9574d395be6ed07ba arch/arm64/kvm/hyp/nvhe/pkvm.c
+2025-08-27 11:08:29,426 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756263814,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"974142be1dbc4552d0773bde173cb553cd49237e","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/1","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756263808,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-11}],"sizeInsertions":10,"sizeDeletions":64}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":10,"moreChanges":false}
+
+2025-08-27 11:08:29,429 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/pkvm.c（新增0行，删除-11行，状态：modified）
+2025-08-27 11:08:29,429 - INFO - client.py:get_changes:548 - 变更获取完成：共处理2/2个文件（commit_id：974142be1dbc4552d0773bde173cb553cd49237e）
+2025-08-27 11:08:29,430 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']
+2025-08-27 11:08:29,430 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']
+2025-08-27 11:08:29,431 - INFO - worker.py:_process_gerrit_task:757 - 为 2 个文件添加绝对行号标注...
+2025-08-27 11:08:29,436 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs 标注完成（共4273行），前5行预览:
+[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+2025-08-27 11:08:29,439 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/pkvm.c 标注完成（共2025行），前5行预览:
+[1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+2025-08-27 11:08:29,446 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: Iae088db053d47504a4e533f9574d395be6ed07ba/1
+2025-08-27 11:08:29,447 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 2个文件变更
+2025-08-27 11:08:29,451 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};\n[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};\n[3] use crate::bindings::{\n[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,\n[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,\n[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,\n[7] };\n[8] use crate::bindings::{\n[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,\n[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,\n[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,\n[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,\n[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,\n[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,\n[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,\n[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,\n[17] };\n[18] use crate::bindings::{\n[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,\n[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,\n[21]     HCR_TIDCP, HCR_TLOR,\n[22] };\n[23] use crate::bindings::{\n[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,\n[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,\n[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,\n[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,\n[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,\n[29]     ARM_SMCCC_KV...
+2025-08-27 11:08:29,452 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs, 内容长度: 161207
+2025-08-27 11:08:29,452 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,
+[7] };
+[8] use crate::bindings::{
+[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,
+[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,
+[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,
+[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,
+[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,
+[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,
+[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,
+[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,
+[17] };
+[18] use crate::bindings::{
+[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,
+[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,
+[21]     HCR_TIDCP, HCR_TLOR,
+[22] };
+[23] use crate::bindings::{
+[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,
+[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,
+[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,
+[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,
+[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,
+[29]     ARM_SMCCC_KVM_FUNC_MMIO_RGUARD_MAP, ARM_SMCCC_KVM_F...
+2025-08-27 11:08:29,452 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 2: arch/arm64/kvm/hyp/nvhe/pkvm.c, 内容长度: 66690
+2025-08-27 11:08:29,453 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+[6] 
+[7] #include <linux/kvm_host.h>
+[8] #include <linux/mm.h>
+[9] 
+[10] #include <kvm/arm_hypercalls.h>
+[11] #include <kvm/arm_psci.h>
+[12] 
+[13] #include <asm/kvm_emulate.h>
+[14] 
+[15] #include <nvhe/alloc.h>
+[16] #include <nvhe/arm-smccc.h>
+[17] #include <nvhe/mem_protect.h>
+[18] #include <nvhe/memory.h>
+[19] #include <nvhe/mm.h>
+[20] #include <nvhe/pkvm.h>
+[21] #include <nvhe/rwlock.h>
+[22] #include <nvhe/trap_handler.h>
+[23] 
+[24] /* Used by icache_is_aliasing(). */
+[25] #ifndef CONFIG_X1_RMS
+[26] unsigned long __icache_flags;
+[27] #endif
+[28] 
+[29] /* Used by kvm_get_vttbr(). */
+[30] unsigned int kvm_arm_vmid_bits;
+[31] 
+[32] unsigned int kvm_sve_max_vl;
+[33] 
+[34] unsigned int kvm_host_sve_max_vl;
+[35] 
+[36] /*
+[37]  * The currently loaded hyp vCPU for each physical CPU. Used only when
+[38]  * protected KVM is enabled, but for both protected and non-protected VMs.
+[39]  */
+[40] DECLARE_PER_CPU(struct pkvm_hyp_vcpu *, loaded_hyp_vcpu);
+[41] 
+[42] /*
+[43]  * Host fp state for all cpus. This could include the host simd state, as well
+[44]  * as the sve and sme states if supported. Written to when the guest accesses
+[45]  * its own FPSIMD state, and read when the guest state is live and we need to
+[46]  * switch back to the host.
+[47]  *
+[48]  * Only valid when (fp_state == FP_STATE_GUEST_OWNED) in the hyp vCPU structure.
+[49]  */
+[50] unsigned long __ro_after_init kvm_arm_hyp_host_fp_state[NR_CPUS];
+[51] 
+[52] #ifndef CONFIG_X1_RMS
+[53] static void *__get_host_fpsimd_bytes(void)
+[54] {
+[55] 	/*
+[56] 	 * The addresses in this array have been converted to hyp addresses
+[57] 	 * in finalize_init_hyp_mode().
+[58] 	 */
+[59] 	return (void *)kvm_arm_hyp_host_fp_state[hyp_smp_processor_id()];
+[60] }
+[61] 
+[62] struct user_fpsimd_state *get_host_fpsimd_state(struct kvm_vcpu *vcpu)
+[63] {
+[64] 	if (likely(!is_protected_kvm_enabled()...
+2025-08-27 11:12:33,824 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: # 代码审查报告
+
+## 评分明细
+1. **功能实现的正确性与健壮性**：40/50分
+   - 代码从C转换为Rust，保留了原有逻辑结构，使用了Rust的类型系统增强健壮性
+   - 包含充分的错误处理和边界检查，但无法完全验证正确性
+   - 内存管理、并发控制和错误处理机制设计合理
+
+2. **安全性与潜在风险**：25/30分
+   - Rust语言提供了内存安全保证，代码中使用了锁和原子操作保证并发安全
+   - 存在较多的`unsafe`代码块（约40处），需要特别关注
+   - 指针操作和FFI调用有适当的注释说明，但仍需谨慎验证
+
+3. **是否符合最佳实践**：9/10分
+   - 代码结构清晰，遵循Rust命名规范
+   - 注释充分，特别是对复杂逻辑和`unsafe`块
+   - 使用了Result和Option等类型进行错误处理
+   - 函数文档完整，使用了Rust文档注释
+
+4. **性能与资源利用效率**：4/5分
+   - 使用内联函数（`#[inline(always)]`）优化性能
+   - 采用条件编译（`#[cfg]`）根据硬件特性选择最优实现
+   - 内存管理使用内存池减少分配开销
+   - 锁实现支持LL/SC和LSE两种原子指令集
+
+5. **Commits信息的清晰性与准确性**：3/5分
+   - 提交信息简洁明了："pkvm: Remove extern \"C\""
+   - 提供了Change-Id便于跟踪
+   - 但未详细描述具体变更内容和原因
+
+## 总分
+总分:81分
+
+## 总体评语
+代码整体质量较高，从C转换为Rust的系统性工作，功能实现较为完整，安全性考虑周全。代码充分利用了Rust的类型系统和所有权机制来增强内存安全，同时保持了与原有C代码的功能等价性。主要关注点在于多处`unsafe`代码块需要严格验证，以及并发控制的正确性。
+
+## 详细建议
+1. 对所有`unsafe`代码块进行更严格的审查，特别是直接内存操作和FFI调用
+2. 考虑添加更多单元测试，特别是边界条件和错误路径
+3. 对于超过50行的复杂函数（如`pkvm_memshare_call`），建议进一步拆分
+4. 在提交信息中增加变更背景和原因说明
+5. 考虑添加性能基准测试，确保Rust实现不劣于原C实现
+
+## JSON数据
+```json
+{
+  "score": 81,
+  "summary": "代码整体质量较高，从C转换为Rust的系统性工作，功能实现较为完整，安全性考虑周全，但存在一些需要关注的unsafe代码块和并发安全问题。提交信息简洁但不够详细。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 344,
+      "message": "在unsafe块中直接解引用vm_table指针，需要确保vm_table指针有效且不为null，否则可能导致未定义行为。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 1012,
+      "message": "在unsafe块中访问self.kvm的arch.flags字段，需要确保self.kvm指针有效，否则可能导致空指针解引用。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 1069,
+      "message": "在unsafe块中使用container_of!宏进行类型转换，需要确保转换的类型和偏移量正确，否则可能导致内存访问错误。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 1255,
+      "message": "在unsafe块中使用AtomicI32::from_ptr，需要确保指针对齐且有效，否则可能导致原子操作未定义行为。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 3788,
+      "message": "在unsafe块中直接调用__this_cpu_write，需要确保写入的地址有效且对齐，否则可能导致数据竞争或内存错误。"
+    ...
+2025-08-27 11:12:33,826 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 11:12:33,826 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 81,
+  "summary": "代码整体质量较高，从C转换为Rust的系统性工作，功能实现较为完整，安全性考虑周全，但存在一些需要关注的unsafe代码块和并发安全问题。...
+2025-08-27 11:12:33,899 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:344 -> 在unsafe块中直接解引用vm_table指针，需要确保vm_table指针有效且不为null，否...
+2025-08-27 11:12:33,900 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1012 -> 在unsafe块中访问self.kvm的arch.flags字段，需要确保self.kvm指针有效，...
+2025-08-27 11:12:33,901 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1069 -> 在unsafe块中使用container_of!宏进行类型转换，需要确保转换的类型和偏移量正确，否则...
+2025-08-27 11:12:33,901 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1255 -> 在unsafe块中使用AtomicI32::from_ptr，需要确保指针对齐且有效，否则可能导致原...
+2025-08-27 11:12:33,901 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3788 -> 在unsafe块中直接调用__this_cpu_write，需要确保写入的地址有效且对齐，否则可能导...
+2025-08-27 11:12:33,902 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:344 → 在unsafe块中直接解引用vm_table指针，需要确保vm_table指针有效且不为null，否
+2025-08-27 11:12:33,902 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1012 → 在unsafe块中访问self.kvm的arch.flags字段，需要确保self.kvm指针有效，
+2025-08-27 11:12:33,902 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1069 → 在unsafe块中使用container_of!宏进行类型转换，需要确保转换的类型和偏移量正确，否则
+2025-08-27 11:12:33,903 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1255 → 在unsafe块中使用AtomicI32::from_ptr，需要确保指针对齐且有效，否则可能导致原
+2025-08-27 11:12:33,903 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3788 → 在unsafe块中直接调用__this_cpu_write，需要确保写入的地址有效且对齐，否则可能导
+2025-08-27 11:12:33,903 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 5/5
+2025-08-27 11:12:33,904 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 81/100 -> 0
+2025-08-27 11:12:33,910 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 11:12:33,911 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=5
+2025-08-27 11:12:33,912 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 81/100):代码整体质量较高，从C转换为Rust的系统性工作，功能实现较为完整，安全性考虑周全，但存在一些需要关注的unsafe代码块和并发安全问题。提交信息简洁但不够详细。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs":[{"line":344,"message":"在unsafe块中直接解引用vm_table指针，需要确保vm_table指针有效且不为null，否则可能导致未定义行为。","unresolved":t...
+2025-08-27 11:12:33,912 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json 974142be1dbc4552d0773bde173cb553cd49237e
+2025-08-27 11:12:35,569 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 11:12:35,569 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: Iae088db053d47504a4e533f9574d395be6ed07ba
+11:12:35 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:06:56.594677s on worker cd59dd92739f4cc181202261eba9d75a
+11:12:35 10.42.41.50:29418: Job OK (2802f194-b238-4953-a5df-57e87987e5ce)
+11:12:35 Result is kept for 500 seconds
+11:12:35 Cleaning registries for queue: 10.42.41.50:29418
+12:12:20 Cleaning registries for queue: 10.42.41.50:29418
+13:12:05 Cleaning registries for queue: 10.42.41.50:29418
+13:55:30 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (37562c80-cb00-47d4-9086-5ac462f28284)
+2025-08-27 13:55:34,196 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 13:55:34,197 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 13:55:34,198 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: Iae088db053d47504a4e533f9574d395be6ed07ba/3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2
+2025-08-27 13:55:34,198 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: 3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2
+2025-08-27 13:55:34,198 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2
+2025-08-27 13:55:34,199 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:55:35,066 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2
+2025-08-27 13:55:35,113 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756273992,"open":true,"status":"NEW","currentPatchSet":{"number":2,"revision":"3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/2","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756273992,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-21}],"sizeInsertions":10,"sizeDeletions":74}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 13:55:35,115 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']（共2个）
+2025-08-27 13:55:35,116 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:55:35,983 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 13:55:36,029 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756273992,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":1,"moreChanges":false}
+
+2025-08-27 13:55:36,031 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:55:36,897 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 13:55:36,944 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756273992,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 13:57:28,477 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs的diff内容: use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+use crate::bindings::{
+    kvm...
+2025-08-27 13:57:28,479 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:57:29,350 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Iae088db053d47504a4e533f9574d395be6ed07ba arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs
+2025-08-27 13:57:29,397 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756274013,"open":true,"status":"NEW","currentPatchSet":{"number":2,"revision":"3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/2","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756273992,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-21}],"sizeInsertions":10,"sizeDeletions":74}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":13,"moreChanges":false}
+
+2025-08-27 13:57:29,399 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs（新增1行，删除-53行，状态：modified）
+2025-08-27 13:57:29,400 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:57:30,265 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 13:57:30,311 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756274013,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":1,"moreChanges":false}
+
+2025-08-27 13:57:30,313 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:57:31,179 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Iae088db053d47504a4e533f9574d395be6ed07ba
+2025-08-27 13:57:31,225 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756274013,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":1,"moreChanges":false}
+
+2025-08-27 13:59:01,560 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/pkvm.c的diff内容: // SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2021 Google LLC
+ * Author: Fuad Tabba <tabba@google.com>
+ */
+
+#include <linux/kvm_host.h>
+#include <linux/mm.h>
+
+#include <kvm/arm_hypercal...
+2025-08-27 13:59:01,561 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 13:59:02,471 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Iae088db053d47504a4e533f9574d395be6ed07ba arch/arm64/kvm/hyp/nvhe/pkvm.c
+2025-08-27 13:59:02,540 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Iae088db053d47504a4e533f9574d395be6ed07ba","number":2501,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2501","hashtags":[],"createdOn":1756263808,"lastUpdated":1756274013,"open":true,"status":"NEW","currentPatchSet":{"number":2,"revision":"3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/01/2501/2","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756273992,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":1,"deletions":-53},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-21}],"sizeInsertions":10,"sizeDeletions":74}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":4,"moreChanges":false}
+
+2025-08-27 13:59:02,542 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/pkvm.c（新增0行，删除-21行，状态：modified）
+2025-08-27 13:59:02,543 - INFO - client.py:get_changes:548 - 变更获取完成：共处理2/2个文件（commit_id：3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2）
+2025-08-27 13:59:02,545 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']
+2025-08-27 13:59:02,546 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c']
+2025-08-27 13:59:02,546 - INFO - worker.py:_process_gerrit_task:757 - 为 2 个文件添加绝对行号标注...
+2025-08-27 13:59:02,553 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs 标注完成（共4273行），前5行预览:
+[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+2025-08-27 13:59:02,555 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/pkvm.c 标注完成（共2015行），前5行预览:
+[1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+2025-08-27 13:59:02,572 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: Iae088db053d47504a4e533f9574d395be6ed07ba/2
+2025-08-27 13:59:02,573 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 2个文件变更
+2025-08-27 13:59:02,578 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};\n[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};\n[3] use crate::bindings::{\n[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,\n[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,\n[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,\n[7] };\n[8] use crate::bindings::{\n[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,\n[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,\n[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,\n[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,\n[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,\n[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,\n[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,\n[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,\n[17] };\n[18] use crate::bindings::{\n[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,\n[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,\n[21]     HCR_TIDCP, HCR_TLOR,\n[22] };\n[23] use crate::bindings::{\n[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,\n[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,\n[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,\n[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,\n[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,\n[29]     ARM_SMCCC_KV...
+2025-08-27 13:59:02,578 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs, 内容长度: 161207
+2025-08-27 13:59:02,579 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,
+[7] };
+[8] use crate::bindings::{
+[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,
+[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,
+[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,
+[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,
+[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,
+[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,
+[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,
+[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,
+[17] };
+[18] use crate::bindings::{
+[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,
+[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,
+[21]     HCR_TIDCP, HCR_TLOR,
+[22] };
+[23] use crate::bindings::{
+[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,
+[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,
+[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,
+[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,
+[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,
+[29]     ARM_SMCCC_KVM_FUNC_MMIO_RGUARD_MAP, ARM_SMCCC_KVM_F...
+2025-08-27 13:59:02,579 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 2: arch/arm64/kvm/hyp/nvhe/pkvm.c, 内容长度: 66475
+2025-08-27 13:59:02,580 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+[6] 
+[7] #include <linux/kvm_host.h>
+[8] #include <linux/mm.h>
+[9] 
+[10] #include <kvm/arm_hypercalls.h>
+[11] #include <kvm/arm_psci.h>
+[12] 
+[13] #include <asm/kvm_emulate.h>
+[14] 
+[15] #include <nvhe/alloc.h>
+[16] #include <nvhe/arm-smccc.h>
+[17] #include <nvhe/mem_protect.h>
+[18] #include <nvhe/memory.h>
+[19] #include <nvhe/mm.h>
+[20] #include <nvhe/pkvm.h>
+[21] #include <nvhe/rwlock.h>
+[22] #include <nvhe/trap_handler.h>
+[23] 
+[24] /* Used by icache_is_aliasing(). */
+[25] #ifndef CONFIG_X1_RMS
+[26] unsigned long __icache_flags;
+[27] #endif
+[28] 
+[29] /* Used by kvm_get_vttbr(). */
+[30] unsigned int kvm_arm_vmid_bits;
+[31] 
+[32] unsigned int kvm_sve_max_vl;
+[33] 
+[34] unsigned int kvm_host_sve_max_vl;
+[35] 
+[36] /*
+[37]  * The currently loaded hyp vCPU for each physical CPU. Used only when
+[38]  * protected KVM is enabled, but for both protected and non-protected VMs.
+[39]  */
+[40] DECLARE_PER_CPU(struct pkvm_hyp_vcpu *, loaded_hyp_vcpu);
+[41] 
+[42] /*
+[43]  * Host fp state for all cpus. This could include the host simd state, as well
+[44]  * as the sve and sme states if supported. Written to when the guest accesses
+[45]  * its own FPSIMD state, and read when the guest state is live and we need to
+[46]  * switch back to the host.
+[47]  *
+[48]  * Only valid when (fp_state == FP_STATE_GUEST_OWNED) in the hyp vCPU structure.
+[49]  */
+[50] unsigned long __ro_after_init kvm_arm_hyp_host_fp_state[NR_CPUS];
+[51] 
+[52] #ifndef CONFIG_X1_RMS
+[53] static void *__get_host_fpsimd_bytes(void)
+[54] {
+[55] 	/*
+[56] 	 * The addresses in this array have been converted to hyp addresses
+[57] 	 * in finalize_init_hyp_mode().
+[58] 	 */
+[59] 	return (void *)kvm_arm_hyp_host_fp_state[hyp_smp_processor_id()];
+[60] }
+[61] 
+[62] struct user_fpsimd_state *get_host_fpsimd_state(struct kvm_vcpu *vcpu)
+[63] {
+[64] 	if (likely(!is_protected_kvm_enabled()...
+2025-08-27 14:02:49,426 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: # 代码审查报告
+
+## 评分明细
+
+### 1. 功能实现的正确性与健壮性（50分）
+- **得分：48/50**
+- 代码实现了完整的pKVM（Protected KVM）功能，包括虚拟机创建、VCPU初始化、内存管理、PSCI处理等核心功能
+- 实现了与原始C代码相同的功能逻辑，确保了功能正确性
+- 边界条件处理完善，如指针有效性检查、内存分配失败处理等
+- 使用Rust安全特性（Option、Result类型）提高了错误处理能力
+- 改进点：部分复杂函数（如`pkvm_memshare_call`）逻辑较复杂，可考虑进一步拆分提高可读性
+
+### 2. 安全性与潜在风险（30分）
+- **得分：28/30**
+- 大量使用`unsafe`块进行底层操作，但每个unsafe块都有详细的安全注释
+- 实现了安全的指针封装（如`ptr_wrapper`宏）减少裸指针操作
+- 并发安全机制完善，使用读写锁（`HypRwlock`）保护共享数据
+- 内存管理安全，使用内存账户系统跟踪内存分配
+- 潜在风险：部分`unsafe`块操作较为复杂，需要严格验证（如行[3707-3711]的指针转换）
+
+### 3. 是否符合最佳实践（10分）
+- **得分：10/10**
+- 代码结构清晰，模块化良好，每个函数职责明确
+- 注释详尽，特别是复杂算法和安全保证的说明
+- 遵循Rust命名规范（snake_case/SCREAMING_SNAKE_CASE）
+- 使用Rust惯用模式（Option/Result处理错误）
+- 实现了内存安全的所有权机制，避免数据竞争
+
+### 4. 性能与资源利用效率（5分）
+- **得分：5/5**
+- 内存管理高效，根据策略选择不同内存管理方式（分配新内存或固定共享内存）
+- 合理使用内联函数（`#[inline(always)]`）优化关键路径
+- 锁机制使用恰当，临界区设计合理
+- 避免不必要的内存复制，使用零拷贝技术
+
+### 5. Commits信息的清晰性与准确性（5分）
+- **得分：5/5**
+- 提交信息"pkvm: Remove extern "C""简洁明了
+- 准确反映了代码变更的核心内容（移除extern "C"声明）
+- 符合Git提交信息规范
+
+## 总分：96分
+
+## 总体评语
+代码整体质量很高，成功将C代码重构为Rust实现，保持了原有功能的同时提高了安全性和可维护性。代码结构清晰，注释详尽，错误处理完善。使用了大量unsafe块但都有适当的安全保证，符合系统级编程的要求。提交信息清晰准确，便于后续维护和协作。
+
+## JSON格式行级评论
+```json
+{
+  "score": 96,
+  "summary": "代码整体质量很高，功能实现正确，符合Rust最佳实践。代码详细注释，结构清晰，错误处理完善。使用了大量unsafe块但都有适当的安全保证。提交信息清晰准确。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 200,
+      "message": "arm_smccc_call_val函数实现正确，使用了位操作来构造SMCCC调用值。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 1452,
+      "message": "pkvm_hyp_req_reserve函数中的unsafe块是安全的，因为指针操作都在数组边界内进行。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 1920,
+      "message": "pkvm_memshare_call函数中的局部函数使用合理，但需要确保这些函数不会引起生命周期问题。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 2435,
+      "message": "smp_store_release_ptr函数实现正确，使用原子操作确保指针存储的顺序性。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs",
+      "line": 3075,
+      "message": "HypRwloc...
+2025-08-27 14:02:49,428 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 14:02:49,429 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 96,
+  "summary": "代码整体质量很高，功能实现正确，符合Rust最佳实践。代码详细注释，结构清晰，错误处理完善。使用了大量unsafe块但都有适当的安全保证。...
+2025-08-27 14:02:49,515 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:200 -> arm_smccc_call_val函数实现正确，使用了位操作来构造SMCCC调用值。...
+2025-08-27 14:02:49,515 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1452 -> pkvm_hyp_req_reserve函数中的unsafe块是安全的，因为指针操作都在数组边界内进...
+2025-08-27 14:02:49,516 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1920 -> pkvm_memshare_call函数中的局部函数使用合理，但需要确保这些函数不会引起生命周期问题...
+2025-08-27 14:02:49,516 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:2435 -> smp_store_release_ptr函数实现正确，使用原子操作确保指针存储的顺序性。...
+2025-08-27 14:02:49,517 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3075 -> HypRwlock的实现考虑了LL/SC和LSE两种原子指令，提高了兼容性。...
+2025-08-27 14:02:49,517 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3707 -> 指针转换操作需要特别注意安全性，确保类型转换是有效的。...
+2025-08-27 14:02:49,518 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:4121 -> vm_table_lock的获取和释放配对正确，确保锁不会被遗忘。...
+2025-08-27 14:02:49,518 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:200 → arm_smccc_call_val函数实现正确，使用了位操作来构造SMCCC调用值。
+2025-08-27 14:02:49,519 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1452 → pkvm_hyp_req_reserve函数中的unsafe块是安全的，因为指针操作都在数组边界内进
+2025-08-27 14:02:49,519 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:1920 → pkvm_memshare_call函数中的局部函数使用合理，但需要确保这些函数不会引起生命周期问题
+2025-08-27 14:02:49,519 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:2435 → smp_store_release_ptr函数实现正确，使用原子操作确保指针存储的顺序性。
+2025-08-27 14:02:49,520 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3075 → HypRwlock的实现考虑了LL/SC和LSE两种原子指令，提高了兼容性。
+2025-08-27 14:02:49,520 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:3707 → 指针转换操作需要特别注意安全性，确保类型转换是有效的。
+2025-08-27 14:02:49,521 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs:4121 → vm_table_lock的获取和释放配对正确，确保锁不会被遗忘。
+2025-08-27 14:02:49,521 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 7/7
+2025-08-27 14:02:49,521 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 96/100 -> 0
+2025-08-27 14:02:49,529 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 14:02:49,530 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=7
+2025-08-27 14:02:49,530 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 96/100):代码整体质量很高，功能实现正确，符合Rust最佳实践。代码详细注释，结构清晰，错误处理完善。使用了大量unsafe块但都有适当的安全保证。提交信息清晰准确。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs":[{"line":200,"message":"arm_smccc_call_val函数实现正确，使用了位操作来构造SMCCC调用值。","unresolved":true},{"line":1452,"me...
+2025-08-27 14:02:49,531 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json 3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2
+2025-08-27 14:02:51,482 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 14:02:51,483 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: Iae088db053d47504a4e533f9574d395be6ed07ba
+14:02:51 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:07:21.190860s on worker cd59dd92739f4cc181202261eba9d75a
+14:02:51 10.42.41.50:29418: Job OK (37562c80-cb00-47d4-9086-5ac462f28284)
+14:02:51 Result is kept for 500 seconds
+14:02:51 Cleaning registries for queue: 10.42.41.50:29418
+14:34:21 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (a674bf61-3964-4254-9eac-f82015190624)
+2025-08-27 14:34:25,639 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783
+2025-08-27 14:34:25,640 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 14:34:25,640 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783/4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2
+2025-08-27 14:34:25,641 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: 4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2
+2025-08-27 14:34:25,641 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2
+2025-08-27 14:34:25,641 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 14:34:26,508 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2
+2025-08-27 14:34:26,554 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix3","id":"Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783","number":2506,"subject":"stacktrace: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2506","hashtags":[],"createdOn":1756276330,"lastUpdated":1756276330,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/06/2506/1","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756276330,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs","type":"MODIFIED","insertions":8,"deletions":-11}],"sizeInsertions":17,"sizeDeletions":11}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 14:34:26,556 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs']（共1个）
+2025-08-27 14:34:26,557 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 14:34:27,421 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783
+2025-08-27 14:34:27,467 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix3","id":"Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783","number":2506,"subject":"stacktrace: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2506","hashtags":[],"createdOn":1756276330,"lastUpdated":1756276330,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 14:34:27,469 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 14:34:28,332 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783
+2025-08-27 14:34:28,378 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix3","id":"Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783","number":2506,"subject":"stacktrace: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2506","hashtags":[],"createdOn":1756276330,"lastUpdated":1756276330,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 14:35:43,245 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs的diff内容: // SPDX-License-Identifier: Apache-2.0 OR MIT
+//
+// Copyright (c) 2025 by the author(s)
+//
+// Author(s):
+//   - CHAN TAO <chentao@kylinos.cn>
+//
+// KVM nVHE hypervisor stack tracing support.
+#[cfg(CON...
+2025-08-27 14:35:43,246 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 14:35:44,117 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783 arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs
+2025-08-27 14:35:44,163 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix3","id":"Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783","number":2506,"subject":"stacktrace: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2506","hashtags":[],"createdOn":1756276330,"lastUpdated":1756276338,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/06/2506/1","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756276330,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs","type":"MODIFIED","insertions":8,"deletions":-11}],"sizeInsertions":17,"sizeDeletions":11}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":6,"moreChanges":false}
+
+2025-08-27 14:35:44,166 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs（新增8行，删除-11行，状态：modified）
+2025-08-27 14:35:44,167 - INFO - client.py:get_changes:548 - 变更获取完成：共处理1/1个文件（commit_id：4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2）
+2025-08-27 14:35:44,167 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs']
+2025-08-27 14:35:44,168 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs']
+2025-08-27 14:35:44,168 - INFO - worker.py:_process_gerrit_task:757 - 为 1 个文件添加绝对行号标注...
+2025-08-27 14:35:44,169 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs 标注完成（共326行），前5行预览:
+[1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+2025-08-27 14:35:44,177 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783/1
+2025-08-27 14:35:44,177 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 1个文件变更
+2025-08-27 14:35:44,178 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] // SPDX-License-Identifier: Apache-2.0 OR MIT\n[2] //\n[3] // Copyright (c) 2025 by the author(s)\n[4] //\n[5] // Author(s):\n[6] //   - CHAN TAO <chentao@kylinos.cn>\n[7] //\n[8] // KVM nVHE hypervisor stack tracing support.\n[9] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[10] use crate::bindings::{\n[11]     read_once, stack_info, task_struct, unwind_state, EINVAL, OVERFLOW_STACK_SIZE,\n[12] };\n[13] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[14] use core::ffi::c_void;\n[15] // bindings中自动生成的类型，参数类型指定为extern"C"，故在此重新定义类型\n[16] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[17] type StackTraceConsumeFn = Option<fn(*mut c_void, c_ulong) -> bool>;\n[18] \n[19] use crate::bindings::is_protected_kvm_enabled;\n[20] use crate::define_per_cpu;\n[21] use crate::kvm_pkvm::PAGE_SIZE;\n[22] use crate::percpu::this_cpu_ptr;\n[23] use crate::{ptr_wrapper, ptr_wrapper_const};\n[24] use core::ffi::c_ulong;\n[25] use core::mem;\n[26] use core::ptr;\n[27] \n[28] // 常量定义，与C代码保持一致\n[29] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[30] const SZ_4K: u64 = 0x1000; // 4KB\n[31] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[32] const OVERFLOW_STACK_SIZE_RUST: u64 = SZ_4K;\n[33] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]\n[34] const NVHE_STACKTRACE_SIZE: u64 = (OVERFLOW_STACK_SIZE_RUST + PAGE_SIZE) / 2 + 8; // sizeof(long) = 8\n[35] \n[36] // 结构体声明，需与C侧保持一致\n[37] #[repr(C)]\n[38] pub struct KvmNvheStacktraceInfo {\n[39]     pub stack_base: c_ulong,\n[40]     pub overflow_stack_base: c_ulong,\n[41]     pub fp: c_ulong,\n[42]     pub pc: c_ulong,\n[43] }\n[44] \n[45] #[repr(C)]\n[46] pub struct KvmNvheInitParams {\n[47]     pub stack_hyp_va: *mut u8, // 只需stack_hyp_va字段，类型与C侧保持一致\n[48]                                // 其他字段省略\n[49] }\n[50] \n[51] // 实际定义per-cpu变量，解决链接错误\n[52] define_per_cpu!(pub kvm_stacktrace_info: KvmNvheStacktraceInfo = unsafe { mem::zeroed() });\n[53] \n[54] // 声明pkvm_stacktrace为外部per-CPU变量，避免重复定义\n[55] // 该变量已在C代码中定义：DEFINE_PER_CPU(unsigned long [NVHE_STACKTRACE_SIZE...
+2025-08-27 14:35:44,179 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs, 内容长度: 10711
+2025-08-27 14:35:44,179 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+[6] //   - CHAN TAO <chentao@kylinos.cn>
+[7] //
+[8] // KVM nVHE hypervisor stack tracing support.
+[9] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[10] use crate::bindings::{
+[11]     read_once, stack_info, task_struct, unwind_state, EINVAL, OVERFLOW_STACK_SIZE,
+[12] };
+[13] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[14] use core::ffi::c_void;
+[15] // bindings中自动生成的类型，参数类型指定为extern"C"，故在此重新定义类型
+[16] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[17] type StackTraceConsumeFn = Option<fn(*mut c_void, c_ulong) -> bool>;
+[18] 
+[19] use crate::bindings::is_protected_kvm_enabled;
+[20] use crate::define_per_cpu;
+[21] use crate::kvm_pkvm::PAGE_SIZE;
+[22] use crate::percpu::this_cpu_ptr;
+[23] use crate::{ptr_wrapper, ptr_wrapper_const};
+[24] use core::ffi::c_ulong;
+[25] use core::mem;
+[26] use core::ptr;
+[27] 
+[28] // 常量定义，与C代码保持一致
+[29] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[30] const SZ_4K: u64 = 0x1000; // 4KB
+[31] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[32] const OVERFLOW_STACK_SIZE_RUST: u64 = SZ_4K;
+[33] #[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]
+[34] const NVHE_STACKTRACE_SIZE: u64 = (OVERFLOW_STACK_SIZE_RUST + PAGE_SIZE) / 2 + 8; // sizeof(long) = 8
+[35] 
+[36] // 结构体声明，需与C侧保持一致
+[37] #[repr(C)]
+[38] pub struct KvmNvheStacktraceInfo {
+[39]     pub stack_base: c_ulong,
+[40]     pub overflow_stack_base: c_ulong,
+[41]     pub fp: c_ulong,
+[42]     pub pc: c_ulong,
+[43] }
+[44] 
+[45] #[repr(C)]
+[46] pub struct KvmNvheInitParams {
+[47]     pub stack_hyp_va: *mut u8, // 只需stack_hyp_va字段，类型与C侧保持一致
+[48]                                // 其他字段省略
+[49] }
+[50] 
+[51] // 实际定义per-cpu变量，解决链接错误
+[52] define_per_cpu!(pub kvm_stacktrace_info: KvmNvheStacktraceInfo = unsafe { mem::zeroed() });
+[53] 
+[54] // 声明pkvm_stacktrace为外部per-CPU变量，避免重复定义
+[55] // 该变量已在C代码中定义：DEFINE_PER_CPU(unsigned long [NVHE_STACKTRACE_SIZE/sizeof(long)], pkvm_stacktrace);
+[56] extern "C" {
+[57]     #[cf...
+2025-08-27 14:38:40,365 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: # 代码审查报告
+
+## 评分明细
+
+1. **功能实现的正确性与健壮性（50分）**：38分
+   - 代码逻辑基本正确，有详细的文档注释说明函数功能
+   - 使用了条件编译处理不同配置
+   - 存在边界情况处理不足的问题，如指针有效性验证不充分
+   - 错误处理机制基本完善，但部分场景下考虑不够周全
+
+2. **安全性与潜在风险（30分）**：24分
+   - 使用了类型安全的指针包装器
+   - unsafe代码块有安全性说明注释
+   - 存在潜在的安全风险，如指针有效性验证不足
+   - 多核环境下的并发访问安全性考虑不足
+
+3. **是否符合最佳实践（10分）**：8分
+   - 代码结构清晰，函数职责明确
+   - 命名规范一致，注释详细
+   - 部分函数实现可以进一步优化组织
+   - 外部函数声明可以增加更详细的说明
+
+4. **性能与资源利用效率（5分）**：4分
+   - 使用了适当的内联优化策略
+   - 条件编译避免了不必要的代码生成
+   - 部分函数的边界检查可能影响性能
+   - 栈展开深度限制不足可能导致性能问题
+
+5. **Commits信息的清晰性与准确性（5分）**：2分
+   - 提交信息过于简单："stacktrace: Remove extern "C""
+   - 缺少变更原因和影响的详细说明
+   - 不利于后续维护和代码历史追溯
+
+## 总分:76分
+
+## 详细评语
+
+该代码实现了KVM nVHE hypervisor的栈跟踪功能，整体结构清晰，注释详细，使用了适当的Rust语言特性。代码通过条件编译处理不同配置，并使用了类型安全的指针包装器来增强安全性。
+
+主要优点包括：
+- 函数文档注释完善，清晰说明了功能、参数和安全性考虑
+- 使用了条件编译 `#[cfg(CONFIG_PROTECTED_NVHE_STACKTRACE)]` 来处理不同配置
+- 在关键函数中使用了适当的内联优化策略
+- 错误处理机制基本完善
+
+存在的主要问题：
+1. 边界情况处理不足：如 `pkvm_save_backtrace_entry` 函数中对索引的检查不完整，未考虑负数情况
+2. 指针有效性验证不充分：多个函数中直接使用指针参数而未进行有效性验证
+3. 并发安全性考虑不足：操作per-cpu全局变量时未考虑多核环境下的同步
+4. 提交信息过于简单，不利于代码维护和历史追溯
+
+建议改进方向：
+- 增强边界情况处理，特别是对指针和索引的验证
+- 在unsafe操作前增加更严格的验证
+- 考虑添加适当的同步机制以确保多核环境下的安全
+- 提供更详细的提交信息，说明变更原因和影响
+
+```json
+{
+  "score": 76,
+  "summary": "代码总体实现了KVM nVHE hypervisor stack tracing功能，结构清晰，注释详细，但存在一些边界情况处理不足和安全风险问题。提交信息过于简单，需要改进。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs",
+      "line": 230,
+      "message": "在pkvm_save_backtrace_entry函数中，对idx的边界检查应同时考虑上界和下界，防止负数索引导致的内存越界。建议添加检查：if idx < 0 || idx > (NVHE_STACKTRACE_SIZE / 8) as i32 - 2"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs",
+      "line": 128,
+      "message": "在unwind_next函数中，帧指针对齐检查后，建议增加对指针有效性的验证，确保fp指向合法的栈区域。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs",
+      "line": 196,
+      "message": "在hyp_prepare_backtrace函数中，操作per-cpu全局变量时，应考虑添加适当的同步机制，防止多核环境下的数据竞争。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs",
+      "line": 320,
+      "message": "在kvm_nvhe_prepare_back...
+2025-08-27 14:38:40,367 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 14:38:40,368 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 76,
+  "summary": "代码总体实现了KVM nVHE hypervisor stack tracing功能，结构清晰，注释详细，但存在一些边界情况处理不足和安全...
+2025-08-27 14:38:40,466 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:230 -> 在pkvm_save_backtrace_entry函数中，对idx的边界检查应同时考虑上界和下界，...
+2025-08-27 14:38:40,467 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:128 -> 在unwind_next函数中，帧指针对齐检查后，建议增加对指针有效性的验证，确保fp指向合法的栈区...
+2025-08-27 14:38:40,468 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:196 -> 在hyp_prepare_backtrace函数中，操作per-cpu全局变量时，应考虑添加适当的同...
+2025-08-27 14:38:40,468 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:320 -> 在kvm_nvhe_prepare_backtrace函数中，建议对传入的fp和pc参数进行有效性验...
+2025-08-27 14:38:40,469 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:230 → 在pkvm_save_backtrace_entry函数中，对idx的边界检查应同时考虑上界和下界，
+2025-08-27 14:38:40,469 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:128 → 在unwind_next函数中，帧指针对齐检查后，建议增加对指针有效性的验证，确保fp指向合法的栈区
+2025-08-27 14:38:40,470 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:196 → 在hyp_prepare_backtrace函数中，操作per-cpu全局变量时，应考虑添加适当的同
+2025-08-27 14:38:40,470 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs:320 → 在kvm_nvhe_prepare_backtrace函数中，建议对传入的fp和pc参数进行有效性验
+2025-08-27 14:38:40,470 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 4/4
+2025-08-27 14:38:40,471 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 76/100 -> 0
+2025-08-27 14:38:40,479 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 14:38:40,480 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=4
+2025-08-27 14:38:40,481 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 76/100):代码总体实现了KVM nVHE hypervisor stack tracing功能，结构清晰，注释详细，但存在一些边界情况处理不足和安全风险问题。提交信息过于简单，需要改进。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/stacktrace.rs":[{"line":230,"message":"在pkvm_save_backtrace_entry函数中，对idx的边界检查应同时考虑上界和下界，防止负数索引导致的内存越界。...
+2025-08-27 14:38:40,481 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json 4e83567f1d9d9edd1b263fe73a131d1f5fb57cc2
+2025-08-27 14:38:41,999 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 14:38:42,000 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: Ie7f9b4f99fbc84fbb467361b5bd25667c43bb783
+14:38:42 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:04:20.230807s on worker cd59dd92739f4cc181202261eba9d75a
+14:38:42 10.42.41.50:29418: Job OK (a674bf61-3964-4254-9eac-f82015190624)
+14:38:42 Result is kept for 500 seconds
+14:38:42 Cleaning registries for queue: 10.42.41.50:29418
+15:38:27 Cleaning registries for queue: 10.42.41.50:29418
+16:38:12 Cleaning registries for queue: 10.42.41.50:29418
+17:25:49 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (50c60e4e-a37e-4bb1-bbd8-ef868bfdcc74)
+2025-08-27 17:25:53,722 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:25:53,722 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 17:25:53,723 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5/b9b4f0636a6df2b52558a3c370fd2ee828e8db33
+2025-08-27 17:25:53,723 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: b9b4f0636a6df2b52558a3c370fd2ee828e8db33
+2025-08-27 17:25:53,724 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:b9b4f0636a6df2b52558a3c370fd2ee828e8db33
+2025-08-27 17:25:53,724 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:25:54,592 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:b9b4f0636a6df2b52558a3c370fd2ee828e8db33
+2025-08-27 17:25:54,603 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286611,"open":true,"status":"NEW","currentPatchSet":{"number":3,"revision":"b9b4f0636a6df2b52558a3c370fd2ee828e8db33","parents":["3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2"],"ref":"refs/changes/02/2502/3","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756286611,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":4,"deletions":-86},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-33},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs","type":"MODIFIED","insertions":3,"deletions":-4}],"sizeInsertions":16,"sizeDeletions":123}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":3,"moreChanges":false}
+
+2025-08-27 17:25:54,606 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c', 'arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs']（共3个）
+2025-08-27 17:25:54,607 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:25:55,473 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:25:55,519 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286611,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":3,"moreChanges":false}
+
+2025-08-27 17:25:55,521 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:25:56,382 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:25:56,427 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286611,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:27:48,372 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs的diff内容: use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+use crate::bindings::{
+    kvm...
+2025-08-27 17:27:48,373 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:49,238 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5 arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs
+2025-08-27 17:27:49,253 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW","currentPatchSet":{"number":3,"revision":"b9b4f0636a6df2b52558a3c370fd2ee828e8db33","parents":["3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2"],"ref":"refs/changes/02/2502/3","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756286611,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":4,"deletions":-86},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-33},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs","type":"MODIFIED","insertions":3,"deletions":-4}],"sizeInsertions":16,"sizeDeletions":123}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":4,"moreChanges":false}
+
+2025-08-27 17:27:49,255 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs（新增4行，删除-86行，状态：modified）
+2025-08-27 17:27:49,256 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:50,119 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:27:50,166 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:27:50,168 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:51,031 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:27:51,077 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:29:42,450 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/pkvm.c的diff内容: // SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2021 Google LLC
+ * Author: Fuad Tabba <tabba@google.com>
+ */
+
+#include <linux/kvm_host.h>
+#include <linux/mm.h>
+
+#include <kvm/arm_hypercal...
+2025-08-27 17:29:42,451 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:43,366 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5 arch/arm64/kvm/hyp/nvhe/pkvm.c
+2025-08-27 17:29:43,396 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW","currentPatchSet":{"number":3,"revision":"b9b4f0636a6df2b52558a3c370fd2ee828e8db33","parents":["3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2"],"ref":"refs/changes/02/2502/3","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756286611,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":4,"deletions":-86},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-33},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs","type":"MODIFIED","insertions":3,"deletions":-4}],"sizeInsertions":16,"sizeDeletions":123}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":7,"moreChanges":false}
+
+2025-08-27 17:29:43,398 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/pkvm.c（新增0行，删除-33行，状态：modified）
+2025-08-27 17:29:43,398 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:44,305 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:29:44,579 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:29:44,580 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:45,524 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+2025-08-27 17:29:45,589 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:31:24,200 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs的diff内容: use core::cmp;
+use core::ffi::{c_long, c_ushort, c_void};
+use core::hint::unlikely;
+use core::mem;
+///这个主要是替换nvhe目录下的hyp-main.c文件
+///
+///主要用于hypcall分发
+///
+// 1. 标准库导入
+use core::ptr;
+use core::sync::at...
+2025-08-27 17:31:24,201 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:31:25,097 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5 arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs
+2025-08-27 17:31:25,119 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"fix2","id":"Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5","number":2502,"subject":"pkvm: Remove extern \"C\"","owner":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2502","hashtags":[],"createdOn":1756265025,"lastUpdated":1756286629,"open":true,"status":"NEW","currentPatchSet":{"number":3,"revision":"b9b4f0636a6df2b52558a3c370fd2ee828e8db33","parents":["3ae61efbfe24cc8c5ed1ff899fd14aab60c178a2"],"ref":"refs/changes/02/2502/3","uploader":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"createdOn":1756286611,"author":{"name":"yuxin wang","email":"wangyuxin@kylinos.cn","username":"wangyuxin"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":9,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs","type":"MODIFIED","insertions":4,"deletions":-86},{"file":"arch/arm64/kvm/hyp/nvhe/pkvm.c","type":"MODIFIED","insertions":0,"deletions":-33},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs","type":"MODIFIED","insertions":3,"deletions":-4}],"sizeInsertions":16,"sizeDeletions":123}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":11,"moreChanges":false}
+
+2025-08-27 17:31:25,121 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs（新增3行，删除-4行，状态：modified）
+2025-08-27 17:31:25,122 - INFO - client.py:get_changes:548 - 变更获取完成：共处理3/3个文件（commit_id：b9b4f0636a6df2b52558a3c370fd2ee828e8db33）
+2025-08-27 17:31:25,123 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c', 'arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs']
+2025-08-27 17:31:25,123 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs', 'arch/arm64/kvm/hyp/nvhe/pkvm.c', 'arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs']
+2025-08-27 17:31:25,124 - INFO - worker.py:_process_gerrit_task:757 - 为 3 个文件添加绝对行号标注...
+2025-08-27 17:31:25,129 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs 标注完成（共4191行），前5行预览:
+[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+2025-08-27 17:31:25,132 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/pkvm.c 标注完成（共1982行），前5行预览:
+[1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+2025-08-27 17:31:25,136 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs 标注完成（共3415行），前5行预览:
+[1] use core::cmp;
+[2] use core::ffi::{c_long, c_ushort, c_void};
+[3] use core::hint::unlikely;
+[4] use core::mem;
+[5] ///这个主要是替换nvhe目录下的hyp-main.c文件
+2025-08-27 17:31:25,144 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5/3
+2025-08-27 17:31:25,145 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 3个文件变更
+2025-08-27 17:31:25,151 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};\n[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};\n[3] use crate::bindings::{\n[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,\n[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,\n[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,\n[7] };\n[8] use crate::bindings::{\n[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,\n[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,\n[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,\n[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,\n[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,\n[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,\n[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,\n[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,\n[17] };\n[18] use crate::bindings::{\n[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,\n[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,\n[21]     HCR_TIDCP, HCR_TLOR,\n[22] };\n[23] use crate::bindings::{\n[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,\n[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,\n[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,\n[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,\n[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,\n[29]     ARM_SMCCC_KV...
+2025-08-27 17:31:25,152 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/pkvm.rs, 内容长度: 158149
+2025-08-27 17:31:25,153 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] use crate::bindings::{arm_smccc_res, kvm_pgtable_stage2_pgd_size, kvm_sve_max_vl, pkvm_handle_t};
+[2] use crate::bindings::{is_protected_kvm_enabled, read_once, write_once};
+[3] use crate::bindings::{
+[4]     kvm, kvm_host_sve_state, kvm_hyp_memcache, kvm_hyp_req, kvm_pgtable_snapshot, kvm_vcpu, memset,
+[5]     pkvm_hyp_vcpu, pkvm_hyp_vm, user_fpsimd_state, vcpu_reset_state, vcpu_sysreg_MPIDR_EL1,
+[6]     MPIDR_HWID_BITMASK, MPIDR_LEVEL_BITS_SHIFT,
+[7] };
+[8] use crate::bindings::{
+[9]     ID_AA64PFR0_EL1_ELx_64BIT_ONLY, VcpuFlagsOps, ARM_SMCCC_VERSION_1_1, ARM_SMCCC_VERSION_FUNC_ID,
+[10]     EBUSY, EFAULT, EINVAL, ENOENT, ENOMEM, GUEST_HAS_PTRAUTH, GUEST_HAS_SVE,
+[11]     KVM_ARCH_FLAG_MMIO_GUARD, KVM_ARM_VCPU_PMU_V3, KVM_ARM_VCPU_PSCI_0_2,
+[12]     KVM_ARM_VCPU_PTRAUTH_ADDRESS, KVM_ARM_VCPU_PTRAUTH_GENERIC, KVM_ARM_VCPU_SVE, KVM_HYP_LAST_REQ,
+[13]     KVM_HYP_REQ_TYPE_MAP, KVM_MAX_PVMS, KVM_MP_STATE_RUNNABLE, KVM_MP_STATE_STOPPED,
+[14]     KVM_VCPU_MAX_FEATURES, NR_CPUS, PAGE_SHIFT, PSCI_0_2_AFFINITY_LEVEL_OFF,
+[15]     PSCI_0_2_AFFINITY_LEVEL_ON, PSCI_0_2_AFFINITY_LEVEL_ON_PENDING, PSCI_RET_NOT_SUPPORTED,
+[16]     PVMFW_INVALID_LOAD_ADDR, PVM_ID_AA64DFR0_ALLOW, SMCCC_RET_NOT_SUPPORTED, VCPU_SVE_FINALIZED,
+[17] };
+[18] use crate::bindings::{
+[19]     ARM64_HAS_RAS_EXTN, ARM64_HAS_STAGE2_FWB, ARM64_MISMATCHED_CACHE_TYPE, CPTR_NVHE_EL2_RES0,
+[20]     CPTR_NVHE_EL2_RES1, HCR_FWB, HCR_GUEST_FLAGS, HCR_RW, HCR_TACR, HCR_TID1, HCR_TID2, HCR_TID3,
+[21]     HCR_TIDCP, HCR_TLOR,
+[22] };
+[23] use crate::bindings::{
+[24]     ARM_EXCEPTION_HYP_REQ, ARM_SMCCC_FUNC_QUERY_CALL_UID, ARM_SMCCC_KVM_FUNC_FEATURES,
+[25]     ARM_SMCCC_KVM_FUNC_HYP_MEMINFO, ARM_SMCCC_KVM_FUNC_MEM_RELINQUISH,
+[26]     ARM_SMCCC_KVM_FUNC_MEM_SHARE, ARM_SMCCC_KVM_FUNC_MEM_UNSHARE,
+[27]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_ENROLL, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_INFO,
+[28]     ARM_SMCCC_KVM_FUNC_MMIO_GUARD_MAP, ARM_SMCCC_KVM_FUNC_MMIO_GUARD_UNMAP,
+[29]     ARM_SMCCC_KVM_FUNC_MMIO_RGUARD_MAP, ARM_SMCCC_KVM_F...
+2025-08-27 17:31:25,153 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 2: arch/arm64/kvm/hyp/nvhe/pkvm.c, 内容长度: 65097
+2025-08-27 17:31:25,153 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2021 Google LLC
+[4]  * Author: Fuad Tabba <tabba@google.com>
+[5]  */
+[6] 
+[7] #include <linux/kvm_host.h>
+[8] #include <linux/mm.h>
+[9] 
+[10] #include <kvm/arm_hypercalls.h>
+[11] #include <kvm/arm_psci.h>
+[12] 
+[13] #include <asm/kvm_emulate.h>
+[14] 
+[15] #include <nvhe/alloc.h>
+[16] #include <nvhe/arm-smccc.h>
+[17] #include <nvhe/mem_protect.h>
+[18] #include <nvhe/memory.h>
+[19] #include <nvhe/mm.h>
+[20] #include <nvhe/pkvm.h>
+[21] #include <nvhe/rwlock.h>
+[22] #include <nvhe/trap_handler.h>
+[23] 
+[24] /* Used by icache_is_aliasing(). */
+[25] #ifndef CONFIG_X1_RMS
+[26] unsigned long __icache_flags;
+[27] #endif
+[28] 
+[29] /* Used by kvm_get_vttbr(). */
+[30] unsigned int kvm_arm_vmid_bits;
+[31] 
+[32] unsigned int kvm_sve_max_vl;
+[33] 
+[34] unsigned int kvm_host_sve_max_vl;
+[35] 
+[36] /*
+[37]  * The currently loaded hyp vCPU for each physical CPU. Used only when
+[38]  * protected KVM is enabled, but for both protected and non-protected VMs.
+[39]  */
+[40] DECLARE_PER_CPU(struct pkvm_hyp_vcpu *, loaded_hyp_vcpu);
+[41] 
+[42] /*
+[43]  * Host fp state for all cpus. This could include the host simd state, as well
+[44]  * as the sve and sme states if supported. Written to when the guest accesses
+[45]  * its own FPSIMD state, and read when the guest state is live and we need to
+[46]  * switch back to the host.
+[47]  *
+[48]  * Only valid when (fp_state == FP_STATE_GUEST_OWNED) in the hyp vCPU structure.
+[49]  */
+[50] unsigned long __ro_after_init kvm_arm_hyp_host_fp_state[NR_CPUS];
+[51] 
+[52] #ifndef CONFIG_X1_RMS
+[53] static void *__get_host_fpsimd_bytes(void)
+[54] {
+[55] 	/*
+[56] 	 * The addresses in this array have been converted to hyp addresses
+[57] 	 * in finalize_init_hyp_mode().
+[58] 	 */
+[59] 	return (void *)kvm_arm_hyp_host_fp_state[hyp_smp_processor_id()];
+[60] }
+[61] 
+[62] struct user_fpsimd_state *get_host_fpsimd_state(struct kvm_vcpu *vcpu)
+[63] {
+[64] 	if (likely(!is_protected_kvm_enabled()...
+2025-08-27 17:31:25,154 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 3: arch/arm64/kvm/hyp/nvhe/rust/src/hyp_main.rs, 内容长度: 140478
+2025-08-27 17:31:25,154 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] use core::cmp;
+[2] use core::ffi::{c_long, c_ushort, c_void};
+[3] use core::hint::unlikely;
+[4] use core::mem;
+[5] ///这个主要是替换nvhe目录下的hyp-main.c文件
+[6] ///
+[7] ///主要用于hypcall分发
+[8] ///
+[9] // 1. 标准库导入
+[10] use core::ptr;
+[11] use core::sync::atomic::{AtomicPtr, Ordering};
+[12] 
+[13] // 2. 外部 crate 导入
+[14] use aarch64_cpu::asm::barrier::{isb, SY};
+[15] use aarch64_cpu::registers::*;
+[16] use paste::paste;
+[17] 
+[18] // 3. 本地模块导入
+[19] use crate::bindings::kvm_vcpu_arch_FP_STATE_GUEST_OWNED;
+[20] use crate::bindings::EINVAL;
+[21] use crate::bindings::{
+[22]     declare_reg, esr_sys64_to_params, is_protected_kvm_enabled, kvm_cpu_context,
+[23]     kvm_guest_debug_arch, kvm_host_sve_max_vl, kvm_hyp_req, kvm_iommu_ops, kvm_nvhe_init_params,
+[24]     kvm_vcpu, kvm_vcpu_arch_FP_STATE_HOST_OWNED, pkvm_hyp_vcpu, user_fpsimd_state, user_pt_regs,
+[25]     VcpuFlagsOps,
+[26] };
+[27] use crate::bindings::{read_once, write_once};
+[28] use crate::bindings::{
+[29]     vcpu_sysreg, vcpu_sysreg_CNTP_CTL_EL0, vcpu_sysreg_CNTVOFF_EL2, vcpu_sysreg_CNTV_CTL_EL0,
+[30]     vcpu_sysreg_CNTV_CVAL_EL0, vcpu_sysreg_ESR_EL1, vcpu_sysreg_FAR_EL1, vcpu_sysreg_MDSCR_EL1,
+[31]     vcpu_sysreg_NR_SYS_REGS, vcpu_sysreg_OSLSR_EL1, vcpu_sysreg_SCTLR_EL1,
+[32] };
+[33] use crate::switch::sve_cond_update_zcr_vq;
+[34] use crate::switch::sve_ffr_offset;
+[35] use crate::trace::__pkvm_load_tracing;
+[36] use aarch64_cpu::registers::ZCR_EL1;
+[37] 
+[38] #[cfg(CONFIG_NVHE_EL2_DEBUG)]
+[39] use crate::bindings::kvm_pgtable_snapshot;
+[40] use crate::bindings::{
+[41]     ESR_ELx_EC_DABT_CUR, ESR_ELx_EC_DABT_LOW, ESR_ELx_EC_HVC64, ESR_ELx_EC_IABT_CUR,
+[42]     ESR_ELx_EC_IABT_LOW, ESR_ELx_EC_MAX, ESR_ELx_EC_SHIFT, ESR_ELx_EC_SYS64, ESR_ELx_EC_UNKNOWN,
+[43]     ESR_ELx_EC_WFx, ESR_ELx_FSC_EXTABT, ESR_ELx_IL_SHIFT, ESR_ELx_ISV_SHIFT,
+[44]     ESR_ELx_SYS64_ISS_RT_MASK,
+[45] };
+[46] use crate::bindings::{PSR_MODE_EL0t, PSR_MODE_MASK};
+[47] use crate::bindings::{__fpsimd_restore_state, __fpsimd_save_state};
+[48] use crate...
+2025-08-27 17:32:41,244 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: 
+The patch series removes `extern "C"` dependencies from the protected KVM (pKVM) hypervisor implementation, converting C functions to Rust while maintaining functionality. Here's a summary of the key changes:
+
+### Major Changes
+
+1. **Function Conversion**
+   - Removed `extern "C"` declarations from all functions
+   - Converted C functions to Rust implementations
+   - Maintained function signatures and behavior compatibility
+   - Example: `pkvm_handle_psci()` now uses Rust pattern matching instead of C switch statements
+
+2. **Struct and Method Implementation**
+   - Implemented `kvm_cpu_context` methods for hypervisor call handling
+   - Added `pkvm_hyp_vcpu` methods for VM state management
+   - Created Rust equivalents of C helper functions like `fpsimd_host_restore()`
+
+3. **Constant and Macro Conversion**
+   - Converted C constants to Rust constants (e.g., `MDCR_EL2_RES0`)
+   - Implemented Rust macros for bit operations (`genmask_ull`, `field_prep`)
+   - Replaced C macros with Rust inline functions where appropriate
+
+4. **Error Handling Improvements**
+   - Replaced C-style error codes with Rust `Result` types
+   - Added proper error propagation in function chains
+   - Maintained compatibility with existing error codes through conversion
+
+5. **Memory Safety Enhancements**
+   - Replaced raw pointer operations with safe Rust abstractions
+   - Used `Option` types for nullable pointers
+   - Implemented safe wrappers for pointer operations (`ptr_wrapper!` macro)
+
+### Key Benefits
+
+1. **Type Safety**: Rust's type system catches potential errors at compile time
+2. **Memory Safety**: Automatic memory management prevents common vulnerabilities
+3. **Performance**: Zero-cost abstractions maintain performance while adding safety
+4. **Maintainability**: Rust's ownership model makes code easier to reason about
+
+### Notable Implementations
+
+- **Hypervisor Call Dispatch**: Converted C function pointers to Rust static arrays
+- **Exception Handling**: Implemented Rust-safe exception h...
+2025-08-27 17:32:41,246 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 17:32:41,329 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 0/0
+2025-08-27 17:32:41,329 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 0/100 -> 0
+2025-08-27 17:32:41,337 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 17:32:41,337 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=0
+2025-08-27 17:32:41,338 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 0/100):The patch series removes `extern \\\"C\\\"` dependencies from the protected KVM (pKVM) hypervisor implementation, converting C functions to Rust while maintaining functionality. Here's a summary of the key changes:","labels":{"Code-Review":0},"comments":{}}...
+2025-08-27 17:32:41,338 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json b9b4f0636a6df2b52558a3c370fd2ee828e8db33
+2025-08-27 17:32:43,218 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 17:32:43,218 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: Ie2e5a0ff7babbf8f2752962c75c919af4c633dc5
+17:32:43 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'yuxin wang', 'email': 'wangyuxin@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:06:53.392922s on worker cd59dd92739f4cc181202261eba9d75a
+17:32:43 10.42.41.50:29418: Job OK (50c60e4e-a37e-4bb1-bbd8-ef868bfdcc74)
+17:32:43 Result is kept for 500 seconds
+17:32:43 Cleaning registries for queue: 10.42.41.50:29418
+17:54:44 Worker cd59dd92739f4cc181202261eba9d75a [PID 52605]: warm shut down requested
+17:54:44 Unsubscribing from channel rq:pubsub:cd59dd92739f4cc181202261eba9d75a
+.h>
+[18] #include <nvhe/memory.h>
+[19] #include <nvhe/mm.h>
+[20] #include <nvhe/pkvm.h>
+[21] #include <nvhe/rwlock.h>
+[22] #include <nvhe/trap_handler.h>
+[23] 
+[24] /* Used by icache_is_aliasing(). */
+[25] #ifndef CONFIG_X1_RMS
+[26] unsigned long __icache_flags;
+[27] #endif
+[28] 
+[29] /* Used by kvm_get_vttbr(). */
+[30] unsigned int kvm_arm_vmid_bits;
+[31] 
+[32] unsigned int kvm_sve_max_vl;
+[33] 
+[34] unsigned int kvm_host_sve_max_vl;
+[35] 
+[36] /*
+[37]  * The currently loaded hyp vCPU for each physical CPU. Used only when
+[38]  * protected KVM is enabled, but for both protected and non-protected VMs.
+[39]  */
+[40] DECLARE_PER_CPU(struct pkvm_hyp_vcpu *, loaded_hyp_vcpu);
+[41] 
+[42] /*
+[43]  * Host fp state for all cpus. This could include the host simd state, as well
+[44]  * as the sve and sme states if supported. Written to when the guest accesses
+[45]  * its own FPSIMD state, and read when the guest state is live and we need to
+[46]  * switch back to the host.
+[47]  *
+[48]  * Only valid when (fp_state == FP_STATE_GUEST_OWNED) in the hyp vCPU structure.
+[49]  */
+[50] unsigned long __ro_after_init kvm_arm_hyp_host_fp_state[NR_CPUS];
+[51] 
+[52] #ifndef CONFIG_X1_RMS
+[53] static void *__get_host_fpsimd_bytes(void)
+[54] {
+[55] 	/*
+[56] 	 * The addresses in this array have been converted to hyp addresses
+[57] 	 * in finalize_init_hyp_mode().
+[58] 	 */
+[59] 	return (void *)kvm_arm_hyp_host_fp_state[hyp_smp_processor_id()];
+[60] }
+[61] 
+[62] struct user_fpsimd_state *get_host_fpsimd_state(struct kvm_vcpu *vcpu)
+[63] {
+[64] 	if (likely(!is_protected_kvm_enabled()...
+2025-08-27 15:13:15,092 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: 
+# 代码审查报告
+
+## 评分明细
+
+1. **功能实现的正确性与健壮性（50分）**：50分
+   - 代码正确移除了不必要的`extern "C"`声明，同时保留了`#[no_mangle]`属性确保函数仍可被C代码调用
+   - 所有被移除`extern "C"`的函数都正确实现了Rust版本，并通过`pub`和`#[no_mangle]`保持C兼容性
+   - 函数签名保持一致，确保C代码可以无缝调用Rust实现
+
+2. **安全性与潜在风险（30分）**：30分
+   - 没有引入新的安全漏洞，所有函数仍保持原有的安全检查（如空指针检查）
+   - 内存操作和指针访问均使用安全封装（如`ptr_wrapper!`宏）
+   - 保持了原有的错误处理机制
+
+3. **是否符合最佳实践（10分）**：10分
+   - 移除冗余的`extern "C"`声明，遵循Rust最佳实践
+   - 使用`#[no_mangle]`和`pub`组合正确导出C接口函数
+   - 代码结构清晰，注释完整
+
+4. **性能与资源利用效率（5分）**：5分
+   - 移除`extern "C"`声明不会影响性能
+   - 函数实现保持高效，没有不必要的资源消耗
+
+5. **Commits信息的清晰性与准确性（5分）**：5分
+   - 提交信息简洁明了，准确描述了变更内容
+   - Change-Id格式规范，便于追踪
+
+## 总分：总分:100分
+
+## 总体评语
+
+该代码变更成功移除了不必要的`extern "C"`声明，同时将C实现替换为Rust实现。变更保持了功能完整性，所有函数仍通过`#[no_mangle]`和`pub`属性正确导出给C代码使用。代码安全性没有降低，遵循了Rust最佳实践，性能无影响。提交信息清晰准确，是一个高质量的重构变更。
+
+## JSON格式数据
+
+```json
+{
+  "score": 100,
+  "summary": "该代码变更移除了不必要的`extern \"C\"`声明，同时将C实现替换为Rust实现。变更正确，没有破坏功能，函数仍然通过`#[no_mangle]`和`pub`导出给C使用。安全性没有问题，符合最佳实践，性能没有影响。",
+  "comments": []
+}
+```...
+2025-08-27 15:13:15,094 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 15:13:15,095 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 100,
+  "summary": "该代码变更移除了不必要的`extern "C"`声明，同时将C实现替换为Rust实现。变更正确，没有破坏功能，函数仍然通过`#[no_m...
+2025-08-27 15:13:15,183 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 0/0
+2025-08-27 15:13:15,183 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 0/100 -> 0
+2025-08-27 15:13:15,193 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 15:13:15,194 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=0
+2025-08-27 15:13:15,195 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 0/100):{\\n  \\\"score\\\": 100,\\n  \\\"summary\\\": \\\"该代码变更移除了不必要的`extern \\\"C\\\"`声明，同时将C实现替换为Rust实现。变更正确，没有破坏功能，函数仍然通过`#[no_mangle]`和`pub`导出给C使用。安全性没有问题，符合最佳实践，性能没有影响。\\\",\\n  \\\"comments\\\": []\\n}","labels":{"Code-Review":0},"comments":{}}...
+2025-08-27 15:13:15,195 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json 7a67857314d36f338f3ddd375032bfa308e5db46
+2025-08-27 15:13:16,697 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 15:13:16,698 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: I420626bdf36d4e64d2e5b5d12e7b8f9f27983e68
+15:13:16 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'fengxiang li', 'email': 'lifengxiang@kylinos.cn', 'u..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:06:18.152632s on worker 339ba2bcc3364f43951a3a98f2ee371d
+15:13:16 10.42.41.50:29418: Job OK (294c3ad1-7b8e-437e-b922-98f5bbfcf3eb)
+15:13:16 Result is kept for 500 seconds
+15:13:16 Cleaning registries for queue: 10.42.41.50:29418
+15:59:45 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'jili huang', 'email': 'huangjili@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (aa0cd3cf-a709-4654-b80d-422b60b114a3)
+2025-08-27 15:59:49,486 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: I1f00bf9a5ea76039593b36f39d3e76b7123ca71c
+2025-08-27 15:59:49,487 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 15:59:49,487 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: I1f00bf9a5ea76039593b36f39d3e76b7123ca71c/3707438168a433190c884b4646f42488ed4a798d
+2025-08-27 15:59:49,488 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: 3707438168a433190c884b4646f42488ed4a798d
+2025-08-27 15:59:49,488 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:3707438168a433190c884b4646f42488ed4a798d
+2025-08-27 15:59:49,489 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 15:59:50,356 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:3707438168a433190c884b4646f42488ed4a798d
+2025-08-27 15:59:50,404 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"trace","id":"I1f00bf9a5ea76039593b36f39d3e76b7123ca71c","number":2510,"subject":"[FIX] trace: Fixed the issue of being unable to use trace","owner":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2510","hashtags":[],"createdOn":1756281454,"lastUpdated":1756281454,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"3707438168a433190c884b4646f42488ed4a798d","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/10/2510/1","uploader":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"createdOn":1756281454,"author":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":21,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs","type":"MODIFIED","insertions":28,"deletions":-36}],"sizeInsertions":49,"sizeDeletions":36}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 15:59:50,407 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs']（共1个）
+2025-08-27 15:59:50,407 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 15:59:51,273 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON I1f00bf9a5ea76039593b36f39d3e76b7123ca71c
+2025-08-27 15:59:51,319 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"trace","id":"I1f00bf9a5ea76039593b36f39d3e76b7123ca71c","number":2510,"subject":"[FIX] trace: Fixed the issue of being unable to use trace","owner":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2510","hashtags":[],"createdOn":1756281454,"lastUpdated":1756281454,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 15:59:51,320 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 15:59:52,185 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON I1f00bf9a5ea76039593b36f39d3e76b7123ca71c
+2025-08-27 15:59:52,231 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"trace","id":"I1f00bf9a5ea76039593b36f39d3e76b7123ca71c","number":2510,"subject":"[FIX] trace: Fixed the issue of being unable to use trace","owner":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2510","hashtags":[],"createdOn":1756281454,"lastUpdated":1756281454,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 16:01:25,881 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs的diff内容: // SPDX-License-Identifier: Apache-2.0 OR MIT
+//
+// Copyright (c) 2025 by the author(s)
+//
+// Author(s):
+//   - CHAN TAO <chentao@kylinos.cn>
+//
+// KVM nVHE hypervisor trace ring buffer support.
+
+#![a...
+2025-08-27 16:01:25,882 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 16:01:26,748 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files I1f00bf9a5ea76039593b36f39d3e76b7123ca71c arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs
+2025-08-27 16:01:26,795 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","topic":"trace","id":"I1f00bf9a5ea76039593b36f39d3e76b7123ca71c","number":2510,"subject":"[FIX] trace: Fixed the issue of being unable to use trace","owner":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2510","hashtags":[],"createdOn":1756281454,"lastUpdated":1756281535,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"3707438168a433190c884b4646f42488ed4a798d","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/10/2510/1","uploader":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"createdOn":1756281454,"author":{"name":"jili huang","email":"huangjili@kylinos.cn","username":"huangjili"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":21,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs","type":"MODIFIED","insertions":28,"deletions":-36}],"sizeInsertions":49,"sizeDeletions":36}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":8,"moreChanges":false}
+
+2025-08-27 16:01:26,797 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs（新增28行，删除-36行，状态：modified）
+2025-08-27 16:01:26,797 - INFO - client.py:get_changes:548 - 变更获取完成：共处理1/1个文件（commit_id：3707438168a433190c884b4646f42488ed4a798d）
+2025-08-27 16:01:26,798 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs']
+2025-08-27 16:01:26,798 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs']
+2025-08-27 16:01:26,799 - INFO - worker.py:_process_gerrit_task:757 - 为 1 个文件添加绝对行号标注...
+2025-08-27 16:01:26,802 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs 标注完成（共2746行），前5行预览:
+[1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+2025-08-27 16:01:26,809 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: I1f00bf9a5ea76039593b36f39d3e76b7123ca71c/1
+2025-08-27 16:01:26,810 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 1个文件变更
+2025-08-27 16:01:26,812 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] // SPDX-License-Identifier: Apache-2.0 OR MIT\n[2] //\n[3] // Copyright (c) 2025 by the author(s)\n[4] //\n[5] // Author(s):\n[6] //   - CHAN TAO <chentao@kylinos.cn>\n[7] //\n[8] // KVM nVHE hypervisor trace ring buffer support.\n[9] \n[10] #![allow(unused)]\n[11] \n[12] use crate::alloc::{hyp_alloc, hyp_alloc_errno, hyp_free, init_list_head};\n[13] use crate::bindings::{\n[14]     atomic_t, list_head, local_t, write_once, HypSpinlock, EBUSY, EINVAL, ENODEV, PAGE_SHIFT,\n[15] };\n[16] \n[17] use crate::clock::trace_clock_update;\n[18] \n[19] use crate::hyp_smp::hyp_nr_cpus;\n[20] use crate::kvm_pkvm::PAGE_SIZE;\n[21] use crate::page_aligned;\n[22] use crate::percpu::{per_cpu_ptr, this_cpu_ptr};\n[23] use crate::{define_per_cpu, kern_hyp_va, ptr_wrapper, warn_on};\n[24] \n[25] use aarch64_cpu::asm::barrier::{dmb, ISH};\n[26] use core::ffi::c_void;\n[27] use core::hint::unlikely;\n[28] use core::mem;\n[29] use core::ptr;\n[30] use core::sync::atomic::{AtomicU64, Ordering};\n[31] \n[32] use crate::mem_protect::{\n[33]     host::__pkvm_host_donate_hyp,\n[34]     hyp::{__pkvm_hyp_donate_host, hyp_pin_shared_mem, hyp_unpin_shared_mem},\n[35]     mem_types::HypEventId,\n[36]     utils::hyp_virt_to_pfn,\n[37] };\n[38] \n[39] #[cfg(CONFIG_XCORE_UNIT_TEST)]\n[40] use crate::unit_test::TestResult;\n[41] \n[42] #[allow(improper_ctypes)]\n[43] unsafe extern "C" {\n[44]     // local_set的包装函数，原函数定义在include/asm-generic/local.h中\n[45]     fn xcore_rust_local_set(v: *mut local_t, i: i32);\n[46]     // atomic_cmpxchg_acquire的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中\n[47]     fn xcore_rust_atomic_cmpxchg_acquire(v: *mut atomic_t, old: i32, new: i32) -> i32;\n[48]     // atomic_cmpxchg的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中\n[49]     fn xcore_rust_atomic_cmpxchg(v: *mut atomic_t, old: i32, new: i32) -> i32;\n[50]     // TODO(yangyixin): 从C代码引入trace_rb_lock变量,本文件全部替换完后可删除\n[51]     // deadline: 2025-08-25\n[52]     static mut trace_rb_lock: H...
+2025-08-27 16:01:26,813 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs, 内容长度: 91517
+2025-08-27 16:01:26,814 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+[6] //   - CHAN TAO <chentao@kylinos.cn>
+[7] //
+[8] // KVM nVHE hypervisor trace ring buffer support.
+[9] 
+[10] #![allow(unused)]
+[11] 
+[12] use crate::alloc::{hyp_alloc, hyp_alloc_errno, hyp_free, init_list_head};
+[13] use crate::bindings::{
+[14]     atomic_t, list_head, local_t, write_once, HypSpinlock, EBUSY, EINVAL, ENODEV, PAGE_SHIFT,
+[15] };
+[16] 
+[17] use crate::clock::trace_clock_update;
+[18] 
+[19] use crate::hyp_smp::hyp_nr_cpus;
+[20] use crate::kvm_pkvm::PAGE_SIZE;
+[21] use crate::page_aligned;
+[22] use crate::percpu::{per_cpu_ptr, this_cpu_ptr};
+[23] use crate::{define_per_cpu, kern_hyp_va, ptr_wrapper, warn_on};
+[24] 
+[25] use aarch64_cpu::asm::barrier::{dmb, ISH};
+[26] use core::ffi::c_void;
+[27] use core::hint::unlikely;
+[28] use core::mem;
+[29] use core::ptr;
+[30] use core::sync::atomic::{AtomicU64, Ordering};
+[31] 
+[32] use crate::mem_protect::{
+[33]     host::__pkvm_host_donate_hyp,
+[34]     hyp::{__pkvm_hyp_donate_host, hyp_pin_shared_mem, hyp_unpin_shared_mem},
+[35]     mem_types::HypEventId,
+[36]     utils::hyp_virt_to_pfn,
+[37] };
+[38] 
+[39] #[cfg(CONFIG_XCORE_UNIT_TEST)]
+[40] use crate::unit_test::TestResult;
+[41] 
+[42] #[allow(improper_ctypes)]
+[43] unsafe extern "C" {
+[44]     // local_set的包装函数，原函数定义在include/asm-generic/local.h中
+[45]     fn xcore_rust_local_set(v: *mut local_t, i: i32);
+[46]     // atomic_cmpxchg_acquire的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中
+[47]     fn xcore_rust_atomic_cmpxchg_acquire(v: *mut atomic_t, old: i32, new: i32) -> i32;
+[48]     // atomic_cmpxchg的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中
+[49]     fn xcore_rust_atomic_cmpxchg(v: *mut atomic_t, old: i32, new: i32) -> i32;
+[50]     // TODO(yangyixin): 从C代码引入trace_rb_lock变量,本文件全部替换完后可删除
+[51]     // deadline: 2025-08-25
+[52]     static mut trace_rb_lock: HypSpinlock;
+[53] }
+[54] 
+[55] #[allow(non_upper_case_globals)]...
+2025-08-27 16:03:44,834 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: 
+# 代码审查报告
+
+## 评分明细：
+1. 功能实现的正确性与健壮性：40/50
+2. 安全性与潜在风险：25/30
+3. 是否符合最佳实践：8/10
+4. 性能与资源利用效率：3/5
+5. Commits信息的清晰性与准确性：5/5
+
+## 总分：81分
+
+### 详细评论：
+
+#### 功能实现的正确性与健壮性：
+代码整体实现了环形缓冲区的核心功能，逻辑清晰，错误处理较为完善。但存在以下问题：
+
+1. 在`rb_set_flag`函数中（行693-741），使用了`assert!`宏，这在生产环境中可能会导致panic。建议使用更优雅的错误处理方式，如返回错误码。
+
+2. 在`rb_cpu_init`函数中（行1215-1335），虽然进行了错误检查，但在某些错误情况下可能没有完全释放已分配的资源。建议确保在错误路径上正确释放所有已分配的资源。
+
+3. 在`tracing_reserve_entry`函数中（行549-569），状态切换失败后直接返回，没有恢复之前的状态，这可能会导致状态不一致。建议在失败时恢复原始状态。
+
+#### 安全性与潜在风险：
+代码在安全性方面做了大量工作，但仍存在一些潜在风险：
+
+1. 在`rb_set_flag`函数中（行693-741），使用了指针类型转换，将`list.next`转换为`AtomicU64`，这种转换依赖于特定的内存布局，可能在某些平台上不安全。建议添加更多的安全检查和注释。
+
+2. 在`rb_swap_reader_page`函数中（行1494-1585），使用了复杂的指针操作，容易出错。建议简化逻辑，增加更多的安全检查。
+
+3. 在`__pkvm_load_tracing`函数中（行1872-1945），对输入参数的检查不够充分，可能导致内存越界访问。建议增加更严格的参数验证。
+
+#### 是否符合最佳实践：
+代码结构清晰，注释详细，符合大多数最佳实践。但仍有改进空间：
+
+1. 一些函数过于复杂，如`rb_cpu_init`和`rb_swap_reader_page`，建议拆分为更小的函数，提高可读性。
+
+2. 一些TODO注释没有明确的截止日期，建议添加明确的截止日期或优先级。
+
+3. 代码中有一些重复的逻辑，可以提取为公共函数，减少代码重复。
+
+#### 性能与资源利用效率：
+代码在性能方面做了优化，但仍存在一些可以改进的地方：
+
+1. 在`rb_move_tail`函数中（行1362-1470），使用了循环重试机制，在高并发情况下可能会导致性能下降。建议考虑使用其他同步机制。
+
+2. 在`__pkvm_update_clock_tracing`函数中（行2136-2166），使用了自旋等待，可能会浪费CPU资源。建议考虑使用其他等待机制。
+
+#### Commits信息的清晰性与准确性：
+提交信息清晰准确，便于后续维护和协作。提供了相关commit ID，格式规范。
+
+### 总结：
+代码整体质量较高，实现了环形缓冲区的核心功能，逻辑清晰，注释详细。但在安全性、性能和最佳实践方面仍有改进空间。建议重点关注安全问题和性能优化，并进一步简化复杂函数的逻辑。
+
+```json
+{
+  "score": 81,
+  "summary": "代码整体质量较高，实现了环形缓冲区的核心功能，逻辑清晰，注释详细。但在安全性、性能和最佳实践方面仍有改进空间。建议重点关注安全问题和性能优化，并进一步简化复杂函数的逻辑。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 693,
+      "message": "在rb_set_flag函数中使用了assert!宏，在生产环境中可能会导致panic。建议使用更优雅的错误处理方式，如返回错误码。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 1215,
+      "message": "在rb_cpu_init函数中，错误处理路径可能没有完全释放已分配的资源。建议确保在错误路径上正确释放所有已分配的资源。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 549,
+      "message": "在tracing_reserve_entry函数中，状态切换失败后直接返回，没有恢复之前的状态，这可能会导致状态不一致。建议在失败时恢复原始状态...
+2025-08-27 16:03:44,836 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 16:03:44,837 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 81,
+  "summary": "代码整体质量较高，实现了环形缓冲区的核心功能，逻辑清晰，注释详细。但在安全性、性能和最佳实践方面仍有改进空间。建议重点关注安全问题和性能优...
+2025-08-27 16:03:44,911 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:693 -> 在rb_set_flag函数中使用了assert!宏，在生产环境中可能会导致panic。建议使用更优...
+2025-08-27 16:03:44,912 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1215 -> 在rb_cpu_init函数中，错误处理路径可能没有完全释放已分配的资源。建议确保在错误路径上正确释...
+2025-08-27 16:03:44,912 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:549 -> 在tracing_reserve_entry函数中，状态切换失败后直接返回，没有恢复之前的状态，这可...
+2025-08-27 16:03:44,912 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:709 -> 在rb_set_flag函数中，将list.next转换为AtomicU64的指针类型转换依赖于特定...
+2025-08-27 16:03:44,913 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1494 -> 在rb_swap_reader_page函数中，使用了复杂的指针操作，容易出错。建议简化逻辑，增加更...
+2025-08-27 16:03:44,913 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1872 -> 在__pkvm_load_tracing函数中，对输入参数的检查不够充分，可能导致内存越界访问。建议...
+2025-08-27 16:03:44,913 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1362 -> 在rb_move_tail函数中，使用了循环重试机制，在高并发情况下可能会导致性能下降。建议考虑使用...
+2025-08-27 16:03:44,914 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:2136 -> 在__pkvm_update_clock_tracing函数中，使用了自旋等待，可能会浪费CPU资源...
+2025-08-27 16:03:44,914 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:693 → 在rb_set_flag函数中使用了assert!宏，在生产环境中可能会导致panic。建议使用更优
+2025-08-27 16:03:44,914 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1215 → 在rb_cpu_init函数中，错误处理路径可能没有完全释放已分配的资源。建议确保在错误路径上正确释
+2025-08-27 16:03:44,915 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:549 → 在tracing_reserve_entry函数中，状态切换失败后直接返回，没有恢复之前的状态，这可
+2025-08-27 16:03:44,915 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:709 → 在rb_set_flag函数中，将list.next转换为AtomicU64的指针类型转换依赖于特定
+2025-08-27 16:03:44,915 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1494 → 在rb_swap_reader_page函数中，使用了复杂的指针操作，容易出错。建议简化逻辑，增加更
+2025-08-27 16:03:44,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1872 → 在__pkvm_load_tracing函数中，对输入参数的检查不够充分，可能导致内存越界访问。建议
+2025-08-27 16:03:44,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1362 → 在rb_move_tail函数中，使用了循环重试机制，在高并发情况下可能会导致性能下降。建议考虑使用
+2025-08-27 16:03:44,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:2136 → 在__pkvm_update_clock_tracing函数中，使用了自旋等待，可能会浪费CPU资源
+2025-08-27 16:03:44,917 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 8/8
+2025-08-27 16:03:44,917 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 81/100 -> 0
+2025-08-27 16:03:44,925 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 16:03:44,926 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=8
+2025-08-27 16:03:44,926 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 81/100):代码整体质量较高，实现了环形缓冲区的核心功能，逻辑清晰，注释详细。但在安全性、性能和最佳实践方面仍有改进空间。建议重点关注安全问题和性能优化，并进一步简化复杂函数的逻辑。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs":[{"line":693,"message":"在rb_set_flag函数中使用了assert!宏，在生产环境中可能会导致panic。建议使用更优雅的错误处理方式，如返回错误码。","unr...
+2025-08-27 16:03:44,927 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json 3707438168a433190c884b4646f42488ed4a798d
+2025-08-27 16:03:46,119 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 16:03:46,120 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: I1f00bf9a5ea76039593b36f39d3e76b7123ca71c
+16:03:46 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'jili huang', 'email': 'huangjili@kylinos.cn', 'usern..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:04:00.535078s on worker 339ba2bcc3364f43951a3a98f2ee371d
+16:03:46 10.42.41.50:29418: Job OK (aa0cd3cf-a709-4654-b80d-422b60b114a3)
+16:03:46 Result is kept for 500 seconds
+16:03:46 Cleaning registries for queue: 10.42.41.50:29418
+16:46:06 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'tao chen', 'email': 'chentao@kylinos.cn', 'username'..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (ee24bb2d-76af-43ef-9394-fccce702757b)
+2025-08-27 16:46:10,220 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: I30eb7471c3bb669f5a07f8230d917466a157cda4
+2025-08-27 16:46:10,221 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 16:46:10,221 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: I30eb7471c3bb669f5a07f8230d917466a157cda4/d689684946fe9b9fe659b694f7c72b9748801988
+2025-08-27 16:46:10,221 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: d689684946fe9b9fe659b694f7c72b9748801988
+2025-08-27 16:46:10,222 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:d689684946fe9b9fe659b694f7c72b9748801988
+2025-08-27 16:46:10,222 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 16:46:11,110 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:d689684946fe9b9fe659b694f7c72b9748801988
+2025-08-27 16:46:11,157 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"I30eb7471c3bb669f5a07f8230d917466a157cda4","number":2511,"subject":"events: Clean up imports and use direct bindings","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2511","hashtags":[],"createdOn":1756284234,"lastUpdated":1756284234,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"d689684946fe9b9fe659b694f7c72b9748801988","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/11/2511/1","uploader":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"createdOn":1756284234,"author":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":25,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/events.rs","type":"MODIFIED","insertions":24,"deletions":-11}],"sizeInsertions":49,"sizeDeletions":11}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":3,"moreChanges":false}
+
+2025-08-27 16:46:11,159 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/events.rs']（共1个）
+2025-08-27 16:46:11,160 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 16:46:12,023 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON I30eb7471c3bb669f5a07f8230d917466a157cda4
+2025-08-27 16:46:12,069 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"I30eb7471c3bb669f5a07f8230d917466a157cda4","number":2511,"subject":"events: Clean up imports and use direct bindings","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2511","hashtags":[],"createdOn":1756284234,"lastUpdated":1756284234,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 16:46:12,071 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 16:46:12,933 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON I30eb7471c3bb669f5a07f8230d917466a157cda4
+2025-08-27 16:46:12,980 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"I30eb7471c3bb669f5a07f8230d917466a157cda4","number":2511,"subject":"events: Clean up imports and use direct bindings","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2511","hashtags":[],"createdOn":1756284234,"lastUpdated":1756284234,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 16:47:30,044 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/events.rs的diff内容: // SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2025 - KylinOS
+ */
+
+//! nVHE hypervisor的事件管理
+//!
+//! 本模块为pkvm提供事件的管理、使能、同步功能。
+//!
+
+use crate::bindings::{atomic_t, HypSpinlock, EINVAL, ENO...
+2025-08-27 16:47:30,046 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 16:47:30,909 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files I30eb7471c3bb669f5a07f8230d917466a157cda4 arch/arm64/kvm/hyp/nvhe/rust/src/events.rs
+2025-08-27 16:47:30,955 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"I30eb7471c3bb669f5a07f8230d917466a157cda4","number":2511,"subject":"events: Clean up imports and use direct bindings","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2511","hashtags":[],"createdOn":1756284234,"lastUpdated":1756284242,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"d689684946fe9b9fe659b694f7c72b9748801988","parents":["0d6da6b68c8d58c4f96f08898ccc508a37df7c11"],"ref":"refs/changes/11/2511/1","uploader":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"createdOn":1756284234,"author":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":25,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/events.rs","type":"MODIFIED","insertions":24,"deletions":-11}],"sizeInsertions":49,"sizeDeletions":11}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":7,"moreChanges":false}
+
+2025-08-27 16:47:30,958 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/events.rs（新增24行，删除-11行，状态：modified）
+2025-08-27 16:47:30,958 - INFO - client.py:get_changes:548 - 变更获取完成：共处理1/1个文件（commit_id：d689684946fe9b9fe659b694f7c72b9748801988）
+2025-08-27 16:47:30,959 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/events.rs']
+2025-08-27 16:47:30,959 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/events.rs']
+2025-08-27 16:47:30,960 - INFO - worker.py:_process_gerrit_task:757 - 为 1 个文件添加绝对行号标注...
+2025-08-27 16:47:30,961 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/events.rs 标注完成（共683行），前5行预览:
+[1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2025 - KylinOS
+[4]  */
+[5] 
+2025-08-27 16:47:30,969 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: I30eb7471c3bb669f5a07f8230d917466a157cda4/1
+2025-08-27 16:47:30,969 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 1个文件变更
+2025-08-27 16:47:30,970 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] // SPDX-License-Identifier: GPL-2.0-only\n[2] /*\n[3]  * Copyright (C) 2025 - KylinOS\n[4]  */\n[5] \n[6] //! nVHE hypervisor的事件管理\n[7] //!\n[8] //! 本模块为pkvm提供事件的管理、使能、同步功能。\n[9] //!\n[10] \n[11] use crate::bindings::{atomic_t, HypSpinlock, EINVAL, ENOMEM};\n[12] \n[13] // 条件导入，只在需要时导入这些常量\n[14] #[cfg(any(\n[15]     all(CONFIG_TRACING, not(CONFIG_PROTECTED_NVHE_FTRACE)),\n[16]     not(CONFIG_TRACING)\n[17] ))]\n[18] use crate::bindings::EOPNOTSUPP;\n[19] \n[20] #[cfg(not(CONFIG_TRACING))]\n[21] use crate::bindings::ENODEV;\n[22] use crate::mem_protect::mem_types::HypEventId;\n[23] use crate::mm::{__pkvm_private_range_pa, hyp_fixmap_map, hyp_fixmap_unmap};\n[24] use crate::{ptr_wrapper, ptr_wrapper_const};\n[25] use core::ffi::{c_ulong, c_ushort, c_void};\n[26] use core::mem;\n[27] use core::ptr;\n[28] use core::slice;\n[29] \n[30] #[cfg(CONFIG_TRACING)]\n[31] use crate::ftrace::hyp_ftrace_setup;\n[32] \n[33] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]\n[34] use crate::{kern_hyp_va, warn_on};\n[35] \n[36] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]\n[37] use crate::mem_protect::{\n[38]     host::__pkvm_host_donate_hyp, hyp::__pkvm_hyp_donate_host, utils::hyp_virt_to_pfn,\n[39] };\n[40] \n[41] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]\n[42] use crate::ftrace::{hyp_ftrace_disable, hyp_ftrace_find_host_func, hyp_ftrace_sync};\n[43] \n[44] #[cfg(CONFIG_XCORE_UNIT_TEST)]\n[45] use crate::unit_test::TestResult;\n[46] \n[47] extern "C" {\n[48]     // 核心事件ID数组起始位置\n[49]     // 是链接脚本（Linker Script）里定义的一个符号，直接引用\n[50]     static __hyp_event_ids_start: [HypEventId; 0];\n[51] \n[52]     // 核心事件ID数组结束位置\n[53]     // 是链接脚本（Linker Script）里定义的一个符号，直接引用\n[54]     static __hyp_event_ids_end: [HypEventId; 0];\n[55] }\n[56] \n[57] /// 空实现的禁用 ftrace 函数跟踪\n[58] ///\n[59] /// 当 CONFIG_PROTECTED_NVHE_FTRACE 未定义时使用\n[60] /// 与 C 版本行为保持一致\n[61] #[cfg(any(\n[62]     all(CONFIG_TRACING, not(CONFIG_PROTECTED_NVHE_FTRACE)),\n[63]     not(CONFIG_TRACING)\n[64] ))]\n[65] #[inline]\n[66] pub fn __pkvm_d...
+2025-08-27 16:47:30,971 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs, 内容长度: 21341
+2025-08-27 16:47:30,971 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2025 - KylinOS
+[4]  */
+[5] 
+[6] //! nVHE hypervisor的事件管理
+[7] //!
+[8] //! 本模块为pkvm提供事件的管理、使能、同步功能。
+[9] //!
+[10] 
+[11] use crate::bindings::{atomic_t, HypSpinlock, EINVAL, ENOMEM};
+[12] 
+[13] // 条件导入，只在需要时导入这些常量
+[14] #[cfg(any(
+[15]     all(CONFIG_TRACING, not(CONFIG_PROTECTED_NVHE_FTRACE)),
+[16]     not(CONFIG_TRACING)
+[17] ))]
+[18] use crate::bindings::EOPNOTSUPP;
+[19] 
+[20] #[cfg(not(CONFIG_TRACING))]
+[21] use crate::bindings::ENODEV;
+[22] use crate::mem_protect::mem_types::HypEventId;
+[23] use crate::mm::{__pkvm_private_range_pa, hyp_fixmap_map, hyp_fixmap_unmap};
+[24] use crate::{ptr_wrapper, ptr_wrapper_const};
+[25] use core::ffi::{c_ulong, c_ushort, c_void};
+[26] use core::mem;
+[27] use core::ptr;
+[28] use core::slice;
+[29] 
+[30] #[cfg(CONFIG_TRACING)]
+[31] use crate::ftrace::hyp_ftrace_setup;
+[32] 
+[33] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]
+[34] use crate::{kern_hyp_va, warn_on};
+[35] 
+[36] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]
+[37] use crate::mem_protect::{
+[38]     host::__pkvm_host_donate_hyp, hyp::__pkvm_hyp_donate_host, utils::hyp_virt_to_pfn,
+[39] };
+[40] 
+[41] #[cfg(CONFIG_PROTECTED_NVHE_FTRACE)]
+[42] use crate::ftrace::{hyp_ftrace_disable, hyp_ftrace_find_host_func, hyp_ftrace_sync};
+[43] 
+[44] #[cfg(CONFIG_XCORE_UNIT_TEST)]
+[45] use crate::unit_test::TestResult;
+[46] 
+[47] extern "C" {
+[48]     // 核心事件ID数组起始位置
+[49]     // 是链接脚本（Linker Script）里定义的一个符号，直接引用
+[50]     static __hyp_event_ids_start: [HypEventId; 0];
+[51] 
+[52]     // 核心事件ID数组结束位置
+[53]     // 是链接脚本（Linker Script）里定义的一个符号，直接引用
+[54]     static __hyp_event_ids_end: [HypEventId; 0];
+[55] }
+[56] 
+[57] /// 空实现的禁用 ftrace 函数跟踪
+[58] ///
+[59] /// 当 CONFIG_PROTECTED_NVHE_FTRACE 未定义时使用
+[60] /// 与 C 版本行为保持一致
+[61] #[cfg(any(
+[62]     all(CONFIG_TRACING, not(CONFIG_PROTECTED_NVHE_FTRACE)),
+[63]     not(CONFIG_TRACING)
+[64] ))]
+[65] #[inline]
+[66] pub fn __pkvm_disable_ftrace() -> i32 {
+[67]     -(EOPNOTSUPP as i32)
+[68] }
+[69] 
+[70] ///...
+2025-08-27 16:49:19,247 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: # 代码审查报告
+
+## 评分明细
+
+1. **功能实现的正确性与健壮性（50分）**: 40/50
+   - 代码逻辑基本正确，实现了事件管理系统的核心功能
+   - 包含适当的错误处理和返回值检查
+   - 使用条件编译处理不同配置选项
+   - 包含单元测试验证核心功能
+   - 存在一些边界情况处理不当的问题，如指针比较和整数计算
+
+2. **安全性与潜在风险（30分）**: 25/30
+   - 大量使用 `unsafe` 块并附有详细的安全注释
+   - 使用原子操作处理并发访问
+   - 使用锁保护全局数据结构
+   - 对指针操作进行了边界检查
+   - 存在一些潜在的安全风险，如外部指针存储和C函数调用未检查返回值
+
+3. **是否符合最佳实践（10分）**: 8/10
+   - 代码结构清晰，模块化良好
+   - 函数和结构体有详细的文档注释
+   - 使用Rust惯用语法和宏
+   - 部分函数过于复杂，可拆分为更小的函数
+   - 全局变量的使用可能不是最佳实践
+
+4. **性能与资源利用效率（5分）**: 4/5
+   - 使用固定大小数组避免动态内存分配
+   - 使用原子操作减少锁争用
+   - 事件查找使用迭代器，效率较高
+   - 模块事件查找时间复杂度为O(n)，可能影响性能
+
+5. **Commits信息的清晰性与准确性（5分）**: 4/5
+   - 提交信息清晰，说明了修改内容和目的
+   - 包含Jira链接便于追踪问题
+   - 未详细说明变更原因和系统行为影响
+
+## 总分: 81分
+
+## 总体评语
+
+该代码实现了nVHE hypervisor的事件管理系统，整体结构清晰，功能实现基本正确。代码使用了适当的安全措施和并发控制，并包含了单元测试。然而，存在一些潜在的安全风险和性能问题，特别是在指针操作、外部函数调用和事件查找方面。建议加强对边界情况的处理，优化复杂函数，并改进全局变量的使用方式。
+
+## 行级评论
+
+```json
+{
+  "score": 81,
+  "summary": "该代码实现了nVHE hypervisor的事件管理系统，整体结构清晰，功能实现基本正确。代码使用了适当的安全措施和并发控制，并包含了单元测试。然而，存在一些潜在的安全风险和性能问题，特别是在指针操作、外部函数调用和事件查找方面。建议加强对边界情况的处理，优化复杂函数，并改进全局变量的使用方式。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 138,
+      "message": "指针比较 `event_id >= end` 可能不安全，应确保它们指向同一个分配的内存区域，或者使用更安全的比较方式。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 313,
+      "message": "计算 `nr_funcs` 使用 `wrapping_sub` 可能导致整数溢出，应添加结果有效性检查，确保计算出的函数数量合理。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 330,
+      "message": "直接将外部传入的指针存储到全局结构体中，没有进行有效性验证，存在安全风险，应添加指针有效性检查。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 470,
+      "message": "调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错误处理逻辑。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 490,
+      "message": "再次调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错误处理逻辑。"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/events.rs",
+      "line": 457,
+      "message": "类型...
+2025-08-27 16:49:19,250 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 16:49:19,251 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 81,
+  "summary": "该代码实现了nVHE hypervisor的事件管理系统，整体结构清晰，功能实现基本正确。代码使用了适当的安全措施和并发控制，并包含了单元...
+2025-08-27 16:49:19,339 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:138 -> 指针比较 `event_id >= end` 可能不安全，应确保它们指向同一个分配的内存区域，或者使...
+2025-08-27 16:49:19,340 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:313 -> 计算 `nr_funcs` 使用 `wrapping_sub` 可能导致整数溢出，应添加结果有效性检...
+2025-08-27 16:49:19,340 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:330 -> 直接将外部传入的指针存储到全局结构体中，没有进行有效性验证，存在安全风险，应添加指针有效性检查。...
+2025-08-27 16:49:19,341 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:470 -> 调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错误处...
+2025-08-27 16:49:19,341 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:490 -> 再次调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错...
+2025-08-27 16:49:19,342 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:457 -> 类型转换 `funcs_pg as u64` 可能不安全，应确保类型转换的安全性，或者使用更安全的方...
+2025-08-27 16:49:19,342 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:203 -> 事件查找使用线性遍历，时间复杂度为O(n)，当模块数量多时可能影响性能，考虑使用更高效的数据结构。...
+2025-08-27 16:49:19,342 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:138 → 指针比较 `event_id >= end` 可能不安全，应确保它们指向同一个分配的内存区域，或者使
+2025-08-27 16:49:19,342 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:313 → 计算 `nr_funcs` 使用 `wrapping_sub` 可能导致整数溢出，应添加结果有效性检
+2025-08-27 16:49:19,343 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:330 → 直接将外部传入的指针存储到全局结构体中，没有进行有效性验证，存在安全风险，应添加指针有效性检查。
+2025-08-27 16:49:19,343 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:470 → 调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错误处
+2025-08-27 16:49:19,343 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:490 → 再次调用外部C函数 `hyp_ftrace_find_host_func` 后未检查返回值，应添加错
+2025-08-27 16:49:19,344 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:457 → 类型转换 `funcs_pg as u64` 可能不安全，应确保类型转换的安全性，或者使用更安全的方
+2025-08-27 16:49:19,344 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/events.rs:203 → 事件查找使用线性遍历，时间复杂度为O(n)，当模块数量多时可能影响性能，考虑使用更高效的数据结构。
+2025-08-27 16:49:19,344 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 7/7
+2025-08-27 16:49:19,345 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 81/100 -> 0
+2025-08-27 16:49:19,354 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 16:49:19,354 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=7
+2025-08-27 16:49:19,356 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 81/100):该代码实现了nVHE hypervisor的事件管理系统，整体结构清晰，功能实现基本正确。代码使用了适当的安全措施和并发控制，并包含了单元测试。然而，存在一些潜在的安全风险和性能问题，特别是在指针操作、外部函数调用和事件查找方面。建议加强对边界情况的处理，优化复杂函数，并改进全局变量的使用方式。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/events.rs":[{"line":138,"message":"指针比较 `ev...
+2025-08-27 16:49:19,356 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json d689684946fe9b9fe659b694f7c72b9748801988
+2025-08-27 16:49:21,045 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 16:49:21,046 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: I30eb7471c3bb669f5a07f8230d917466a157cda4
+16:49:21 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'tao chen', 'email': 'chentao@kylinos.cn', 'username'..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:03:14.880171s on worker 339ba2bcc3364f43951a3a98f2ee371d
+16:49:21 10.42.41.50:29418: Job OK (ee24bb2d-76af-43ef-9394-fccce702757b)
+16:49:21 Result is kept for 500 seconds
+16:49:21 Cleaning registries for queue: 10.42.41.50:29418
+17:27:49 10.42.41.50:29418: biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'tao chen', 'email': 'chentao@kylinos.cn', 'username'..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') (9e66764d-ecce-4725-961a-413160f531ab)
+2025-08-27 17:27:52,714 - INFO - worker.py:_process_gerrit_task:699 - Direct-Processor 处理Gerrit事件: patchset-created, change_id: Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+2025-08-27 17:27:52,715 - INFO - worker.py:_process_gerrit_task:716 - Direct-Processor 初始化Gerrit客户端: use_ssh=True, base_url=ssh://aireviewer@10.42.41.50:29418
+2025-08-27 17:27:52,715 - INFO - worker.py:_process_gerrit_task:733 - 获取变更内容: Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb/a39fb034ce21cb2be05c986bedd84c79693c894e
+2025-08-27 17:27:52,716 - INFO - client.py:get_changes:363 - 开始获取变更内容，commit_id: a39fb034ce21cb2be05c986bedd84c79693c894e
+2025-08-27 17:27:52,716 - DEBUG - client.py:get_changes:383 - SSH模式执行命令: gerrit query --format=JSON --current-patch-set --files commit:a39fb034ce21cb2be05c986bedd84c79693c894e
+2025-08-27 17:27:52,716 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:53,582 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files commit:a39fb034ce21cb2be05c986bedd84c79693c894e
+2025-08-27 17:27:53,628 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286737,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"a39fb034ce21cb2be05c986bedd84c79693c894e","parents":["d689684946fe9b9fe659b694f7c72b9748801988"],"ref":"refs/changes/12/2512/1","uploader":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"createdOn":1756286737,"author":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"kind":"REWORK","files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":16,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs","type":"MODIFIED","insertions":4,"deletions":-11},{"file":"arch/arm64/kvm/hyp/nvhe/trace.c","type":"MODIFIED","insertions":0,"deletions":-1}],"sizeInsertions":20,"sizeDeletions":12}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":3,"moreChanges":false}
+
+2025-08-27 17:27:53,630 - DEBUG - client.py:get_changes:478 - 过滤后待处理文件：['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs', 'arch/arm64/kvm/hyp/nvhe/trace.c']（共2个）
+2025-08-27 17:27:53,631 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:54,494 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+2025-08-27 17:27:54,541 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286737,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:27:54,543 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:27:55,414 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+2025-08-27 17:27:55,460 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286737,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:29:50,571 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs的diff内容: // SPDX-License-Identifier: Apache-2.0 OR MIT
+//
+// Copyright (c) 2025 by the author(s)
+//
+// Author(s):
+//   - CHAN TAO <chentao@kylinos.cn>
+//
+// KVM nVHE hypervisor trace ring buffer support.
+
+#![a...
+2025-08-27 17:29:50,572 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:51,456 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs
+2025-08-27 17:29:51,481 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286817,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"a39fb034ce21cb2be05c986bedd84c79693c894e","parents":["d689684946fe9b9fe659b694f7c72b9748801988"],"ref":"refs/changes/12/2512/1","uploader":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"createdOn":1756286737,"author":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"kind":"REWORK","approvals":[{"type":"Code-Review","description":"Code-Review","value":"2","grantedOn":1756286817,"by":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"}}],"files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":16,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs","type":"MODIFIED","insertions":4,"deletions":-11},{"file":"arch/arm64/kvm/hyp/nvhe/trace.c","type":"MODIFIED","insertions":0,"deletions":-1}],"sizeInsertions":20,"sizeDeletions":12}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":7,"moreChanges":false}
+
+2025-08-27 17:29:51,483 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs（新增4行，删除-11行，状态：modified）
+2025-08-27 17:29:51,484 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:52,374 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+2025-08-27 17:29:52,432 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286817,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:29:52,434 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:29:53,323 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+2025-08-27 17:29:53,376 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286817,"open":true,"status":"NEW"}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":2,"moreChanges":false}
+
+2025-08-27 17:31:32,859 - DEBUG - client.py:get_changes:496 - 文件arch/arm64/kvm/hyp/nvhe/trace.c的diff内容: // SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2023 Google LLC
+ * Author: Vincent Donnefort <vdonnefort@google.com>
+ */
+
+#include <nvhe/alloc.h>
+#include <nvhe/clock.h>
+#include <nvhe/me...
+2025-08-27 17:31:32,860 - DEBUG - client.py:_make_ssh_request:48 - SSH连接参数：host=10.42.41.50, port=29418, user=aireviewer, key=~/.ssh/id_rsa
+2025-08-27 17:31:33,723 - DEBUG - client.py:_make_ssh_request:60 - 执行ssh命令：gerrit query --format=JSON --current-patch-set --files Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb arch/arm64/kvm/hyp/nvhe/trace.c
+2025-08-27 17:31:33,737 - DEBUG - client.py:_make_ssh_request:64 - ssh命令原始输出：
+{"project":"android/common","branch":"2030/pkvm","id":"Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb","number":2512,"subject":"[FIX] Fix abnormal trace_pipe output","owner":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"url":"https://dev.futlab.me/gerrit/c/android/common/+/2512","hashtags":[],"createdOn":1756286737,"lastUpdated":1756286817,"open":true,"status":"NEW","currentPatchSet":{"number":1,"revision":"a39fb034ce21cb2be05c986bedd84c79693c894e","parents":["d689684946fe9b9fe659b694f7c72b9748801988"],"ref":"refs/changes/12/2512/1","uploader":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"createdOn":1756286737,"author":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"},"kind":"REWORK","approvals":[{"type":"Code-Review","description":"Code-Review","value":"2","grantedOn":1756286817,"by":{"name":"tao chen","email":"chentao@kylinos.cn","username":"chentao"}}],"files":[{"file":"/COMMIT_MSG","type":"ADDED","insertions":16,"deletions":0},{"file":"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs","type":"MODIFIED","insertions":4,"deletions":-11},{"file":"arch/arm64/kvm/hyp/nvhe/trace.c","type":"MODIFIED","insertions":0,"deletions":-1}],"sizeInsertions":20,"sizeDeletions":12}}
+{"type":"stats","rowCount":1,"runTimeMilliseconds":5,"moreChanges":false}
+
+2025-08-27 17:31:33,738 - DEBUG - client.py:get_changes:535 - 成功处理文件：arch/arm64/kvm/hyp/nvhe/trace.c（新增0行，删除-1行，状态：modified）
+2025-08-27 17:31:33,739 - INFO - client.py:get_changes:548 - 变更获取完成：共处理2/2个文件（commit_id：a39fb034ce21cb2be05c986bedd84c79693c894e）
+2025-08-27 17:31:33,740 - INFO - worker.py:_process_gerrit_task:745 - 实际变更文件: ['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs', 'arch/arm64/kvm/hyp/nvhe/trace.c']
+2025-08-27 17:31:33,740 - INFO - webhook_handler.py:filter_changes:92 - 过滤后的文件列表（支持的类型）: ['arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs', 'arch/arm64/kvm/hyp/nvhe/trace.c']
+2025-08-27 17:31:33,741 - INFO - worker.py:_process_gerrit_task:757 - 为 2 个文件添加绝对行号标注...
+2025-08-27 17:31:33,745 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs 标注完成（共2747行），前5行预览:
+[1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+2025-08-27 17:31:33,746 - DEBUG - worker.py:_process_gerrit_task:785 - 文件 arch/arm64/kvm/hyp/nvhe/trace.c 标注完成（共673行），前5行预览:
+[1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2023 Google LLC
+[4]  * Author: Vincent Donnefort <vdonnefort@google.com>
+[5]  */
+2025-08-27 17:31:33,753 - INFO - worker.py:_process_gerrit_task:817 - 已保存初始记录: Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb/1
+2025-08-27 17:31:33,754 - INFO - worker.py:_process_gerrit_task:820 - 开始AI代码审查: 2个文件变更
+2025-08-27 17:31:33,757 - DEBUG - worker.py:_process_gerrit_task:824 - AI输入内容（前2000字符）: [{'diff': '[1] // SPDX-License-Identifier: Apache-2.0 OR MIT\n[2] //\n[3] // Copyright (c) 2025 by the author(s)\n[4] //\n[5] // Author(s):\n[6] //   - CHAN TAO <chentao@kylinos.cn>\n[7] //\n[8] // KVM nVHE hypervisor trace ring buffer support.\n[9] \n[10] #![allow(unused)]\n[11] \n[12] use crate::alloc::{hyp_alloc, hyp_alloc_errno, hyp_free, init_list_head};\n[13] use crate::bindings::{\n[14]     atomic_t, list_head, local_t, write_once, HypSpinlock, EBUSY, EINVAL, ENODEV, PAGE_SHIFT,\n[15] };\n[16] \n[17] use crate::clock::trace_clock_update;\n[18] \n[19] use crate::hyp_smp::hyp_nr_cpus;\n[20] use crate::kvm_pkvm::PAGE_SIZE;\n[21] use crate::page_aligned;\n[22] use crate::percpu::{per_cpu_ptr, this_cpu_ptr};\n[23] use crate::{define_per_cpu, kern_hyp_va, ptr_wrapper, warn_on};\n[24] \n[25] use aarch64_cpu::asm::barrier::{dmb, ISH};\n[26] use core::ffi::c_void;\n[27] use core::hint::unlikely;\n[28] use core::mem;\n[29] use core::ptr;\n[30] use core::sync::atomic::{AtomicU64, Ordering};\n[31] \n[32] use crate::mem_protect::{\n[33]     host::__pkvm_host_donate_hyp,\n[34]     hyp::{__pkvm_hyp_donate_host, hyp_pin_shared_mem, hyp_unpin_shared_mem},\n[35]     mem_types::HypEventId,\n[36]     utils::hyp_virt_to_pfn,\n[37] };\n[38] \n[39] #[cfg(CONFIG_XCORE_UNIT_TEST)]\n[40] use crate::unit_test::TestResult;\n[41] \n[42] #[allow(improper_ctypes)]\n[43] unsafe extern "C" {\n[44]     // local_set的包装函数，原函数定义在include/asm-generic/local.h中\n[45]     fn xcore_rust_local_set(v: *mut local_t, i: i32);\n[46]     // atomic_cmpxchg_acquire的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中\n[47]     fn xcore_rust_atomic_cmpxchg_acquire(v: *mut atomic_t, old: i32, new: i32) -> i32;\n[48]     // atomic_cmpxchg的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中\n[49]     fn xcore_rust_atomic_cmpxchg(v: *mut atomic_t, old: i32, new: i32) -> i32;\n[50]     // TODO(yangyixin): 从C代码引入trace_rb_lock变量,本文件全部替换完后可删除\n[51]     // deadline: 2025-08-25\n[52]     static mut trace_rb_lock: H...
+2025-08-27 17:31:33,757 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 1: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs, 内容长度: 91494
+2025-08-27 17:31:33,758 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: Apache-2.0 OR MIT
+[2] //
+[3] // Copyright (c) 2025 by the author(s)
+[4] //
+[5] // Author(s):
+[6] //   - CHAN TAO <chentao@kylinos.cn>
+[7] //
+[8] // KVM nVHE hypervisor trace ring buffer support.
+[9] 
+[10] #![allow(unused)]
+[11] 
+[12] use crate::alloc::{hyp_alloc, hyp_alloc_errno, hyp_free, init_list_head};
+[13] use crate::bindings::{
+[14]     atomic_t, list_head, local_t, write_once, HypSpinlock, EBUSY, EINVAL, ENODEV, PAGE_SHIFT,
+[15] };
+[16] 
+[17] use crate::clock::trace_clock_update;
+[18] 
+[19] use crate::hyp_smp::hyp_nr_cpus;
+[20] use crate::kvm_pkvm::PAGE_SIZE;
+[21] use crate::page_aligned;
+[22] use crate::percpu::{per_cpu_ptr, this_cpu_ptr};
+[23] use crate::{define_per_cpu, kern_hyp_va, ptr_wrapper, warn_on};
+[24] 
+[25] use aarch64_cpu::asm::barrier::{dmb, ISH};
+[26] use core::ffi::c_void;
+[27] use core::hint::unlikely;
+[28] use core::mem;
+[29] use core::ptr;
+[30] use core::sync::atomic::{AtomicU64, Ordering};
+[31] 
+[32] use crate::mem_protect::{
+[33]     host::__pkvm_host_donate_hyp,
+[34]     hyp::{__pkvm_hyp_donate_host, hyp_pin_shared_mem, hyp_unpin_shared_mem},
+[35]     mem_types::HypEventId,
+[36]     utils::hyp_virt_to_pfn,
+[37] };
+[38] 
+[39] #[cfg(CONFIG_XCORE_UNIT_TEST)]
+[40] use crate::unit_test::TestResult;
+[41] 
+[42] #[allow(improper_ctypes)]
+[43] unsafe extern "C" {
+[44]     // local_set的包装函数，原函数定义在include/asm-generic/local.h中
+[45]     fn xcore_rust_local_set(v: *mut local_t, i: i32);
+[46]     // atomic_cmpxchg_acquire的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中
+[47]     fn xcore_rust_atomic_cmpxchg_acquire(v: *mut atomic_t, old: i32, new: i32) -> i32;
+[48]     // atomic_cmpxchg的包装函数，原函数定义在include/linux/atomic/atomic-instrumented.h中
+[49]     fn xcore_rust_atomic_cmpxchg(v: *mut atomic_t, old: i32, new: i32) -> i32;
+[50]     // TODO(yangyixin): 从C代码引入trace_rb_lock变量,本文件全部替换完后可删除
+[51]     // deadline: 2025-08-25
+[52]     static mut trace_rb_lock: HypSpinlock;
+[53] }
+[54] 
+[55] #[allow(non_upper_case_globals)]...
+2025-08-27 17:31:33,758 - DEBUG - worker.py:_process_gerrit_task:830 - 文件 2: arch/arm64/kvm/hyp/nvhe/trace.c, 内容长度: 20556
+2025-08-27 17:31:33,759 - DEBUG - worker.py:_process_gerrit_task:833 - 文件内容预览: [1] // SPDX-License-Identifier: GPL-2.0-only
+[2] /*
+[3]  * Copyright (C) 2023 Google LLC
+[4]  * Author: Vincent Donnefort <vdonnefort@google.com>
+[5]  */
+[6] 
+[7] #include <nvhe/alloc.h>
+[8] #include <nvhe/clock.h>
+[9] #include <nvhe/mem_protect.h>
+[10] #include <nvhe/mm.h>
+[11] #include <nvhe/trace/trace.h>
+[12] 
+[13] #include <asm/percpu.h>
+[14] #include <asm/kvm_mmu.h>
+[15] #include <asm/local.h>
+[16] 
+[17] #define HYP_RB_PAGE_HEAD		1UL
+[18] #define HYP_RB_PAGE_UPDATE		2UL
+[19] #define HYP_RB_FLAG_MASK		3UL
+[20] 
+[21] struct hyp_buffer_page {
+[22] 	struct list_head	list;
+[23] 	struct buffer_data_page	*page;
+[24] 	unsigned long		write;
+[25] 	unsigned long		entries;
+[26] 	u32			id;
+[27] };
+[28] 
+[29] struct hyp_rb_per_cpu {
+[30] 	struct trace_buffer_meta	*meta;
+[31] 	struct hyp_buffer_page	*tail_page;
+[32] 	struct hyp_buffer_page	*reader_page;
+[33] 	struct hyp_buffer_page	*head_page;
+[34] 	struct hyp_buffer_page	*bpages;
+[35] 	unsigned long		nr_pages;
+[36] 	unsigned long		last_overrun;
+[37] 	u64			write_stamp;
+[38] 	atomic_t		status;
+[39] };
+[40] 
+[41] #define HYP_RB_UNAVAILABLE	0
+[42] #define HYP_RB_READY		1
+[43] #define HYP_RB_WRITING		2
+[44] 
+[45] 
+[46] DEFINE_HYP_SPINLOCK(trace_rb_lock);
+[47] 
+[48] #ifndef CONFIG_X1_RMS
+[49] 
+[50] DEFINE_PER_CPU(struct hyp_rb_per_cpu, trace_rb);
+[51] static bool rb_set_flag(struct hyp_buffer_page *bpage, int new_flag)
+[52] {
+[53] 	unsigned long ret, val = (unsigned long)bpage->list.next;
+[54] 
+[55] 	ret = cmpxchg((unsigned long *)&bpage->list.next,
+[56] 		      val, (val & ~HYP_RB_FLAG_MASK) | new_flag);
+[57] 
+[58] 	return ret == val;
+[59] }
+[60] 
+[61] static struct hyp_buffer_page *rb_hyp_buffer_page(struct list_head *list)
+[62] {
+[63] 	unsigned long ptr = (unsigned long)list & ~HYP_RB_FLAG_MASK;
+[64] 
+[65] 	return container_of((struct list_head *)ptr, struct hyp_buffer_page, list);
+[66] }
+[67] 
+[68] 
+[69] static struct hyp_buffer_page *rb_next_page(struct hyp_buffer_page *bpage)
+[70] {
+[71] 	return rb_hyp_buffer_page(bpage->l...
+2025-08-27 17:33:49,825 - DEBUG - worker.py:_process_gerrit_task:845 - AI原始输出: # 代码审查报告
+
+## 评分明细
+
+### 1. 功能实现的正确性与健壮性（50分）
+- **得分：40分**
+- 代码实现了环形缓冲区跟踪功能，包括事件预留、提交、页面管理等核心功能
+- 存在空指针解引用风险（[814]行），未检查`self.list.prev`是否为空
+- 边界条件处理不完善，如`rb_is_head_page`函数缺少对链表完整性的验证
+- 错误处理机制较为完善，但部分函数返回值检查不够严格
+
+### 2. 安全性与潜在风险（30分）
+- **得分：20分**
+- 存在严重的空指针解引用问题（[814]行），可能导致系统崩溃
+- 多处`unsafe`代码块缺少充分的边界检查和验证
+- 原子操作使用正确，但缺少对并发环境的全面考虑
+- 柔性数组操作存在潜在越界访问风险（[1283]、[1308]行）
+
+### 3. 是否符合最佳实践（10分）
+- **得分：7分**
+- 代码结构清晰，注释详细，函数文档完善
+- 使用了适当的内联优化（`#[inline(always)]`）
+- 存在过多`allow`属性（[547]、[593]行），绕过了编译器检查
+- 静态可变变量访问（`static_mut_refs`）不符合Rust最佳实践
+
+### 4. 性能与资源利用效率（5分）
+- **得分：4分**
+- 使用原子操作和内存屏障确保线程安全
+- 预计算常量减少运行时计算
+- 页面重用机制设计合理，减少内存分配
+- 部分函数存在不必要的指针转换开销
+
+### 5. Commits信息的清晰性与准确性（5分）
+- **得分：4分**
+- 提交信息清晰指出了修复目标（abnormal trace_pipe output）
+- 包含Jira工单号和关联的修复提交
+- 缺少对具体修复内容的详细说明
+- Signed-off-by格式规范
+
+## 总分:75分
+
+## 总体评语
+代码实现了KVM nVHE hypervisor的跟踪环形缓冲区功能，整体架构设计合理，但存在严重的安全隐患。主要问题集中在`rb_is_head_page`函数中的空指针解引用风险，以及多处`unsafe`代码块缺少充分的边界检查。建议优先修复空指针问题，并加强对所有`unsafe`操作的验证。代码注释和文档较为完善，有助于后续维护，但应减少对编译器检查的绕过。
+
+## JSON数据
+```json
+{
+  "score": 75,
+  "summary": "代码实现了KVM nVHE hypervisor的跟踪环形缓冲区功能，但存在严重的安全隐患，特别是空指针解引用风险。建议优先修复安全问题，并加强对unsafe操作的验证。",
+  "comments": [
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 814,
+      "message": "rb_is_head_page函数中存在空指针解引用风险，未检查self.list.prev是否为空，应添加非空检查"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 1283,
+      "message": "柔性数组访问缺少边界检查，可能导致越界访问，应验证nr_page_va的有效性"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 1308,
+      "message": "柔性数组访问缺少边界检查，应确保i在有效范围内"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 547,
+      "message": "allow(static_mut_refs)绕过了Rust的安全保证，应避免使用或提供充分的安全论证"
+    },
+    {
+      "file": "arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs",
+      "line": 593,
+      "message": "allow(static_mut_refs)同样存在安全隐患，应重新设计以避免直接访问静态可变变量"
+    }
+  ]
+}
+```...
+2025-08-27 17:33:49,827 - WARNING - worker.py:_fix_json_format:989 - JSON格式修复后仍然无效: Expecting value: line 1 column 1 (char 0)
+2025-08-27 17:33:49,828 - INFO - worker.py:_fix_json_format:994 - 提取出可能的JSON部分: {
+  "score": 75,
+  "summary": "代码实现了KVM nVHE hypervisor的跟踪环形缓冲区功能，但存在严重的安全隐患，特别是空指针解引用风险。建议优先修复安全问题，...
+2025-08-27 17:33:49,913 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:814 -> rb_is_head_page函数中存在空指针解引用风险，未检查self.list.prev是否为空...
+2025-08-27 17:33:49,914 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1283 -> 柔性数组访问缺少边界检查，可能导致越界访问，应验证nr_page_va的有效性...
+2025-08-27 17:33:49,914 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1308 -> 柔性数组访问缺少边界检查，应确保i在有效范围内...
+2025-08-27 17:33:49,915 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:547 -> allow(static_mut_refs)绕过了Rust的安全保证，应避免使用或提供充分的安全论证...
+2025-08-27 17:33:49,915 - DEBUG - worker.py:_validate_comments_with_actual_files:953 - 有效行级评论: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:593 -> allow(static_mut_refs)同样存在安全隐患，应重新设计以避免直接访问静态可变变量...
+2025-08-27 17:33:49,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:814 → rb_is_head_page函数中存在空指针解引用风险，未检查self.list.prev是否为空
+2025-08-27 17:33:49,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1283 → 柔性数组访问缺少边界检查，可能导致越界访问，应验证nr_page_va的有效性
+2025-08-27 17:33:49,916 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:1308 → 柔性数组访问缺少边界检查，应确保i在有效范围内
+2025-08-27 17:33:49,917 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:547 → allow(static_mut_refs)绕过了Rust的安全保证，应避免使用或提供充分的安全论证
+2025-08-27 17:33:49,917 - DEBUG - worker.py:_convert_comment_line_numbers:1025 - 透传实际行号: arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs:593 → allow(static_mut_refs)同样存在安全隐患，应重新设计以避免直接访问静态可变变量
+2025-08-27 17:33:49,918 - INFO - worker.py:_process_gerrit_task:866 - 有效评论数量: 5/5
+2025-08-27 17:33:49,918 - INFO - worker.py:_process_gerrit_task:870 - 分数转换: 75/100 -> 0
+2025-08-27 17:33:49,925 - INFO - worker.py:_process_gerrit_task:878 - 已更新审查结果到数据库
+2025-08-27 17:33:49,926 - INFO - worker.py:_process_gerrit_task:881 - 提交评审到Gerrit: 得分=0, 评论数=5
+2025-08-27 17:33:49,927 - DEBUG - client.py:_post_review_ssh:221 - 待传递的评审JSON: {"message":"AI代码审查结果 (得分: 75/100):代码实现了KVM nVHE hypervisor的跟踪环形缓冲区功能，但存在严重的安全隐患，特别是空指针解引用风险。建议优先修复安全问题，并加强对unsafe操作的验证。","labels":{"Code-Review":0},"comments":{"arch/arm64/kvm/hyp/nvhe/rust/src/trace.rs":[{"line":814,"message":"rb_is_head_page函数中存在空指针解引用风险，未检查self.list.prev是否为空，应添加非空检查","unresolved"...
+2025-08-27 17:33:49,927 - DEBUG - client.py:_post_review_ssh:226 - 执行SSH命令: gerrit review --json a39fb034ce21cb2be05c986bedd84c79693c894e
+2025-08-27 17:33:51,477 - INFO - client.py:_post_review_ssh:255 - SSH评审提交成功（Gerrit返回）: 无额外输出
+2025-08-27 17:33:51,478 - INFO - worker.py:_process_gerrit_task:894 - 成功处理Gerrit事件: Ibf4ac8315bc27877cdef65ec304cb9c5e2e98efb
+17:33:51 Successfully completed biz.queue.worker.handle_gerrit_event({'uploader': {'name': 'tao chen', 'email': 'chentao@kylinos.cn', 'username'..., None, 'http://10.42.41.50:29418', '10.42.41.50:29418') job in 0:06:02.439660s on worker 339ba2bcc3364f43951a3a98f2ee371d
+17:33:51 10.42.41.50:29418: Job OK (9e66764d-ecce-4725-961a-413160f531ab)
+17:33:51 Result is kept for 500 seconds
+17:33:51 Cleaning registries for queue: 10.42.41.50:29418
+17:54:44 Worker 339ba2bcc3364f43951a3a98f2ee371d [PID 52602]: warm shut down requested
+17:54:44 Unsubscribing from channel rq:pubsub:339ba2bcc3364f43951a3a98f2ee371d

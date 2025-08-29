@@ -1,0 +1,15 @@
+#!/root/AI-Codereview-Gitlab/myenv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+import os
+from dotenv import load_dotenv
+from rq.cli import main
+
+
+if __name__ == '__main__':
+
+    env_path = "/root/AI-Codereview-Gitlab/conf/.env"  # 你的 .env 绝对路径
+    load_dotenv(env_path)  # 加载环境变量到 Worker 进程
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
