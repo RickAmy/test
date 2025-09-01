@@ -1,8 +1,0 @@
-2025-08-17 12:54:40,723 - INFO - config_checker.py:check_config:69 - 开始检查配置项...
-2025-08-17 12:54:40,723 - INFO - config_checker.py:check_env_vars:36 - 所有必要的环境变量均已设置。
-2025-08-17 12:54:40,723 - INFO - config_checker.py:check_llm_provider:57 - LLM 供应商 zhipuai 的配置项已设置。
-2025-08-17 12:54:40,755 - INFO - config_checker.py:check_llm_connectivity:61 - 正在检查 LLM 供应商的连接...
-2025-08-17 12:55:18,964 - ERROR - log.py:error:15 - ❌ 尝试连接LLM失败， {e}
-2025-08-17 12:55:18,964 - ERROR - log.py:error:15 - ❌ LLM连接可能有问题，请检查配置项。
-2025-08-17 12:55:18,964 - INFO - config_checker.py:check_config:73 - 配置项检查完成。
-2025-08-17 12:55:18,967 - INFO - api.py:setup_scheduler:98 - Scheduler started successfully.
